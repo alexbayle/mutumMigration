@@ -39,7 +39,8 @@ class MigrationCommand extends ContainerAwareCommand
     {
         $this->dropDB();
         $this->createDB();
-        $this->schemaUpdate();
+        $this->schemaV1Update();
+        $this->schemaV2Update();
         $this->fixturesLoad();
 
         $this->migrate($output);
@@ -114,7 +115,23 @@ class MigrationCommand extends ContainerAwareCommand
     /**
      * @throws \Exception
      */
-    private function schemaUpdate()
+    private function schemaV1Update()
+    {
+        $app = $this->getApplication();
+        $arguments = array(
+            'command' => 'doctrine:schema:update',
+            '--force' => true,
+            '--em' => 'v1',
+        );
+        $input = new ArrayInput($arguments);
+        $output = new ConsoleOutput();
+        $app->run($input, $output);
+    }
+
+    /**
+     * @throws \Exception
+     */
+    private function schemaV2Update()
     {
         $app = $this->getApplication();
         $arguments = array(
