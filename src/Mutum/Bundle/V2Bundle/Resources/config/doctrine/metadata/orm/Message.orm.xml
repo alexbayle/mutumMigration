@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Message" table="message">
+    <indexes>
+      <index name="mess_disc_id" columns="mess_disc_id"/>
+      <index name="mess_user_id" columns="mess_user_id"/>
+    </indexes>
+    <id name="messId" type="integer" column="mess_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="messUserId" type="integer" column="mess_user_id" nullable="false"/>
+    <field name="messText" type="text" column="mess_text" nullable="false"/>
+    <field name="messDateCreation" type="datetime" column="mess_date_creation" nullable="false"/>
+    <field name="messClass" type="string" column="mess_class" length="255" nullable="false"/>
+    <field name="messDiscId" type="integer" column="mess_disc_id" nullable="false"/>
+  </entity>
+</doctrine-mapping>

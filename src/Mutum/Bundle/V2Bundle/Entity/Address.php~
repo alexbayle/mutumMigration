@@ -1,0 +1,60 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Address
+ *
+ * @ORM\Table(name="address")
+ * @ORM\Entity
+ */
+class Address
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="addr_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $addrId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="addr_address", type="string", length=255, nullable=false)
+     */
+    private $addrAddress;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="addr_zip", type="string", length=5, nullable=false)
+     */
+    private $addrZip;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="addr_city", type="string", length=255, nullable=false)
+     */
+    private $addrCity;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="addr_latitude", type="decimal", precision=18, scale=14, nullable=false)
+     */
+    private $addrLatitude;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="addr_longitude", type="decimal", precision=18, scale=14, nullable=false)
+     */
+    private $addrLongitude;
+
+
+}

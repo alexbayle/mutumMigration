@@ -1,0 +1,88 @@
+<?php
+
+namespace Mutum\Bundle\V1Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * PozAbuse
+ *
+ * @ORM\Table(name="poz_abuse")
+ * @ORM\Entity
+ */
+class PozAbuse
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="abuse_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $abuseId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="abuse_user_id", type="integer", nullable=false)
+     */
+    private $abuseUserId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="abuse_type", type="integer", nullable=false)
+     */
+    private $abuseType;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="abuse_dest_id", type="integer", nullable=false)
+     */
+    private $abuseDestId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="abuse_title", type="string", length=255, nullable=false)
+     */
+    private $abuseTitle;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="abuse_text", type="text", nullable=false)
+     */
+    private $abuseText;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="abuse_created", type="datetime", nullable=false)
+     */
+    private $abuseCreated;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="abuse_aborded", type="integer", nullable=false)
+     */
+    private $abuseAborded;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="abuse_seen", type="integer", nullable=false)
+     */
+    private $abuseSeen;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="abuse_archived", type="integer", nullable=false)
+     */
+    private $abuseArchived;
+
+
+}

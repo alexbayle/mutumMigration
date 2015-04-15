@@ -1,0 +1,74 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Article
+ *
+ * @ORM\Table(name="article", indexes={@ORM\Index(name="arti_state", columns={"arti_state"}), @ORM\Index(name="arti_cat", columns={"arti_cat"})})
+ * @ORM\Entity
+ */
+class Article
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="arti_prod_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $artiProdId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="arti_price", type="integer", nullable=false)
+     */
+    private $artiPrice;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="arti_length", type="integer", nullable=false)
+     */
+    private $artiLength;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="arti_cat", type="integer", nullable=false)
+     */
+    private $artiCat;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="arti_caution", type="integer", nullable=false)
+     */
+    private $artiCaution;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="arti_dates", type="text", nullable=false)
+     */
+    private $artiDates;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="arti_pictures", type="string", length=255, nullable=true)
+     */
+    private $artiPictures;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="arti_state", type="integer", nullable=false)
+     */
+    private $artiState;
+
+
+}

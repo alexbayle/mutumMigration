@@ -1,0 +1,46 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Rank
+ *
+ * @ORM\Table(name="rank")
+ * @ORM\Entity
+ */
+class Rank
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="rank_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $rankId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="rank_name", type="string", length=255, nullable=false)
+     */
+    private $rankName;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="rank_img", type="string", length=255, nullable=false)
+     */
+    private $rankImg;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="rank_amount", type="integer", nullable=false)
+     */
+    private $rankAmount;
+
+
+}

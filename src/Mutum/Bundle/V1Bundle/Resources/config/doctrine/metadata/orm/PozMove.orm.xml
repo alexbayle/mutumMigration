@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="PozMove" table="poz_move">
+    <indexes>
+      <index name="poz_move_move_user_id" columns="move_user_id"/>
+    </indexes>
+    <id name="moveId" type="integer" column="move_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="moveDate" type="datetime" column="move_date" nullable="false"/>
+    <field name="moveType" type="string" column="move_type" length="50" nullable="false"/>
+    <field name="moveUserId" type="integer" column="move_user_id" nullable="false"/>
+    <field name="moveAmount" type="integer" column="move_amount" nullable="false"/>
+  </entity>
+</doctrine-mapping>

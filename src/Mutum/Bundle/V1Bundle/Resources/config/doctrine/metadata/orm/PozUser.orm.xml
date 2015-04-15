@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="PozUser" table="poz_user">
+    <unique-constraints>
+      <unique-constraint name="poz_user_user_email" columns="user_email"/>
+    </unique-constraints>
+    <id name="userId" type="integer" column="user_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="userEmail" type="string" column="user_email" length="120" nullable="false"/>
+    <field name="userFirstname" type="string" column="user_firstname" length="60" nullable="false"/>
+    <field name="userLastname" type="string" column="user_lastname" length="60" nullable="false"/>
+    <field name="userPassword" type="string" column="user_password" length="30" nullable="false"/>
+    <field name="userAdmin" type="string" column="user_admin" length="1" nullable="false"/>
+    <field name="userManager" type="string" column="user_manager" length="1" nullable="false"/>
+    <field name="userAddress" type="string" column="user_address" length="60" nullable="false"/>
+    <field name="userZip" type="string" column="user_zip" length="5" nullable="false"/>
+    <field name="userCity" type="string" column="user_city" length="40" nullable="false"/>
+    <field name="userBirthdate" type="string" column="user_birthdate" length="10" nullable="false"/>
+    <field name="userSex" type="string" column="user_sex" length="1" nullable="false"/>
+    <field name="userPhone" type="string" column="user_phone" length="30" nullable="false"/>
+    <field name="userPhoneHide" type="string" column="user_phone_hide" length="1" nullable="false"/>
+    <field name="userSponsorCode" type="string" column="user_sponsor_code" length="8" nullable="false"/>
+    <field name="userGodfather" type="integer" column="user_godfather" nullable="false"/>
+    <field name="userMangopayId" type="integer" column="user_mangopay_id" nullable="false"/>
+    <field name="userLatitude" type="decimal" column="user_latitude" precision="18" scale="14" nullable="false"/>
+    <field name="userLongitude" type="decimal" column="user_longitude" precision="18" scale="14" nullable="false"/>
+    <field name="userCredit" type="integer" column="user_credit" nullable="false"/>
+    <field name="userScore" type="integer" column="user_score" nullable="false"/>
+    <field name="userNbNotation" type="integer" column="user_nb_notation" nullable="false"/>
+    <field name="userNotation" type="float" column="user_notation" precision="10" scale="0" nullable="false"/>
+    <field name="userCreation" type="datetime" column="user_creation" nullable="false"/>
+    <field name="userLastconnexion" type="datetime" column="user_lastconnexion" nullable="false"/>
+    <field name="userActif" type="string" column="user_actif" length="32" nullable="false"/>
+  </entity>
+</doctrine-mapping>

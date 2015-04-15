@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="PozRequest" table="poz_request">
+    <id name="reqId" type="integer" column="req_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="reqUserId" type="integer" column="req_user_id" nullable="false"/>
+    <field name="reqArtUserId" type="integer" column="req_art_user_id" nullable="false"/>
+    <field name="reqArtId" type="integer" column="req_art_id" nullable="false"/>
+    <field name="reqDatetime" type="datetime" column="req_datetime" nullable="false"/>
+    <field name="reqDateFrom" type="date" column="req_date_from" nullable="false"/>
+    <field name="reqDateTo" type="date" column="req_date_to" nullable="false"/>
+    <field name="reqDateNext" type="date" column="req_date_next" nullable="true"/>
+    <field name="reqMessageNext" type="text" column="req_message_next" nullable="false"/>
+    <field name="reqPtsNext" type="integer" column="req_pts_next" nullable="false"/>
+    <field name="reqPts" type="integer" column="req_pts" nullable="false"/>
+    <field name="reqMessage" type="text" column="req_message" nullable="false"/>
+    <field name="reqCode" type="string" column="req_code" length="6" nullable="false"/>
+    <field name="reqCaution" type="integer" column="req_caution" nullable="false"/>
+    <field name="reqCardId" type="integer" column="req_card_id" nullable="false"/>
+    <field name="reqCautionAsk" type="integer" column="req_caution_ask" nullable="false"/>
+    <field name="reqCautionMotif" type="string" column="req_caution_motif" length="255" nullable="false"/>
+    <field name="reqCautionMessage" type="text" column="req_caution_message" nullable="false"/>
+    <field name="reqCautionAskDate" type="date" column="req_caution_ask_date" nullable="false"/>
+    <field name="reqCautionBankRefund" type="integer" column="req_caution_bank_refund" nullable="false"/>
+    <field name="reqCautionSeen" type="integer" column="req_caution_seen" nullable="false"/>
+    <field name="reqCautionRefuseMessage" type="text" column="req_caution_refuse_message" nullable="false"/>
+    <field name="reqCautionReported" type="integer" column="req_caution_reported" nullable="false"/>
+    <field name="reqStatus" type="string" column="req_status" length="1" nullable="false"/>
+    <field name="reqPreteurNote" type="integer" column="req_preteur_note" nullable="false"/>
+    <field name="reqEmprunteurNote" type="integer" column="req_emprunteur_note" nullable="false"/>
+    <field name="reqArtNote" type="integer" column="req_art_note" nullable="false"/>
+    <field name="reqPreteurArchive" type="integer" column="req_preteur_archive" nullable="false"/>
+    <field name="reqEmprunteurArchive" type="integer" column="req_emprunteur_archive" nullable="false"/>
+    <field name="reqEmprunteurRead" type="integer" column="req_emprunteur_read" nullable="false"/>
+    <field name="reqPreteurRead" type="integer" column="req_preteur_read" nullable="false"/>
+  </entity>
+</doctrine-mapping>

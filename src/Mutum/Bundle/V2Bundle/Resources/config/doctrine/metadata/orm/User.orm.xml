@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="User" table="user">
+    <indexes>
+      <index name="user_godfather" columns="user_godfather"/>
+      <index name="user_rank" columns="user_rank"/>
+      <index name="user_address" columns="user_address"/>
+    </indexes>
+    <unique-constraints>
+      <unique-constraint name="user_email" columns="user_email"/>
+      <unique-constraint name="user_facebook_id" columns="user_facebook_id"/>
+    </unique-constraints>
+    <id name="userId" type="integer" column="user_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="userEmail" type="string" column="user_email" length="255" nullable="false"/>
+    <field name="userFirstname" type="string" column="user_firstname" length="255" nullable="false"/>
+    <field name="userLastname" type="string" column="user_lastname" length="255" nullable="false"/>
+    <field name="userPassword" type="string" column="user_password" length="255" nullable="false"/>
+    <field name="userAdmin" type="boolean" column="user_admin" nullable="false"/>
+    <field name="userAddress" type="integer" column="user_address" nullable="false"/>
+    <field name="userBirthdate" type="date" column="user_birthdate" nullable="false"/>
+    <field name="userSex" type="string" column="user_sex" length="1" nullable="false"/>
+    <field name="userPhone" type="string" column="user_phone" length="255" nullable="false"/>
+    <field name="userPhoneHide" type="boolean" column="user_phone_hide" nullable="false"/>
+    <field name="userSponsorCode" type="string" column="user_sponsor_code" length="255" nullable="false"/>
+    <field name="userTitle" type="string" column="user_title" length="255" nullable="false"/>
+    <field name="userGodfather" type="integer" column="user_godfather" nullable="true"/>
+    <field name="userMangopayId" type="integer" column="user_mangopay_id" nullable="false"/>
+    <field name="userFacebookId" type="bigint" column="user_facebook_id" nullable="true"/>
+    <field name="userCredit" type="integer" column="user_credit" nullable="true"/>
+    <field name="userRank" type="integer" column="user_rank" nullable="false"/>
+    <field name="userNbNotation" type="integer" column="user_nb_notation" nullable="false"/>
+    <field name="userNotation" type="float" column="user_notation" precision="10" scale="0" nullable="false"/>
+    <field name="userDateCreation" type="datetime" column="user_date_creation" nullable="false"/>
+    <field name="userActive" type="string" column="user_active" length="255" nullable="false"/>
+    <field name="userOnline" type="datetime" column="user_online" nullable="false"/>
+    <field name="userScore" type="integer" column="user_score" nullable="true"/>
+  </entity>
+</doctrine-mapping>

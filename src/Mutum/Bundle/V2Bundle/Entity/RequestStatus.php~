@@ -1,0 +1,46 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * RequestStatus
+ *
+ * @ORM\Table(name="request_status")
+ * @ORM\Entity
+ */
+class RequestStatus
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="reqs_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $reqsId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="reqs_name", type="string", length=255, nullable=false)
+     */
+    private $reqsName;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="reqs_borrower_info", type="string", length=255, nullable=false)
+     */
+    private $reqsBorrowerInfo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="reqs_lender_info", type="string", length=255, nullable=false)
+     */
+    private $reqsLenderInfo;
+
+
+}

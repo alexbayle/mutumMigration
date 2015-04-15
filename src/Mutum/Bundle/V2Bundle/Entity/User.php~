@@ -1,0 +1,186 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * User
+ *
+ * @ORM\Table(name="user", uniqueConstraints={@ORM\UniqueConstraint(name="user_email", columns={"user_email"}), @ORM\UniqueConstraint(name="user_facebook_id", columns={"user_facebook_id"})}, indexes={@ORM\Index(name="user_godfather", columns={"user_godfather"}), @ORM\Index(name="user_rank", columns={"user_rank"}), @ORM\Index(name="user_address", columns={"user_address"})})
+ * @ORM\Entity
+ */
+class User
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="user_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $userId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="user_email", type="string", length=255, nullable=false)
+     */
+    private $userEmail;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="user_firstname", type="string", length=255, nullable=false)
+     */
+    private $userFirstname;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="user_lastname", type="string", length=255, nullable=false)
+     */
+    private $userLastname;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="user_password", type="string", length=255, nullable=false)
+     */
+    private $userPassword;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="user_admin", type="boolean", nullable=false)
+     */
+    private $userAdmin;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="user_address", type="integer", nullable=false)
+     */
+    private $userAddress;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="user_birthdate", type="date", nullable=false)
+     */
+    private $userBirthdate;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="user_sex", type="string", length=1, nullable=false)
+     */
+    private $userSex;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="user_phone", type="string", length=255, nullable=false)
+     */
+    private $userPhone;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="user_phone_hide", type="boolean", nullable=false)
+     */
+    private $userPhoneHide;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="user_sponsor_code", type="string", length=255, nullable=false)
+     */
+    private $userSponsorCode;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="user_title", type="string", length=255, nullable=false)
+     */
+    private $userTitle;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="user_godfather", type="integer", nullable=true)
+     */
+    private $userGodfather;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="user_mangopay_id", type="integer", nullable=false)
+     */
+    private $userMangopayId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="user_facebook_id", type="bigint", nullable=true)
+     */
+    private $userFacebookId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="user_credit", type="integer", nullable=true)
+     */
+    private $userCredit;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="user_rank", type="integer", nullable=false)
+     */
+    private $userRank;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="user_nb_notation", type="integer", nullable=false)
+     */
+    private $userNbNotation;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="user_notation", type="float", precision=10, scale=0, nullable=false)
+     */
+    private $userNotation;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="user_date_creation", type="datetime", nullable=false)
+     */
+    private $userDateCreation;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="user_active", type="string", length=255, nullable=false)
+     */
+    private $userActive;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="user_online", type="datetime", nullable=false)
+     */
+    private $userOnline;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="user_score", type="integer", nullable=true)
+     */
+    private $userScore;
+
+
+}

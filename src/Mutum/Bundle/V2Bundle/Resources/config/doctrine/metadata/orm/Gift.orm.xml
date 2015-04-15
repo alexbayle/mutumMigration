@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Gift" table="gift">
+    <id name="giftId" type="integer" column="gift_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="giftCode" type="string" column="gift_code" length="8" nullable="false"/>
+    <field name="giftAmount" type="integer" column="gift_amount" nullable="false"/>
+    <field name="giftNbValid" type="integer" column="gift_nb_valid" nullable="false"/>
+    <field name="giftNbLeft" type="integer" column="gift_nb_left" nullable="false"/>
+    <field name="giftDateCreation" type="datetime" column="gift_date_creation" nullable="false"/>
+    <field name="giftExpiration" type="datetime" column="gift_expiration" nullable="false"/>
+  </entity>
+</doctrine-mapping>

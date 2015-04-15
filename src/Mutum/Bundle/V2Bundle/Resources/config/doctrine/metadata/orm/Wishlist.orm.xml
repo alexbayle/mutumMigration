@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Wishlist" table="wishlist">
+    <indexes>
+      <index name="wish_virp_id" columns="wish_virp_id"/>
+      <index name="wish_address" columns="wish_address"/>
+    </indexes>
+    <id name="wishPostId" type="integer" column="wish_post_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="wishVirpId" type="integer" column="wish_virp_id" nullable="false"/>
+    <field name="wishAddress" type="integer" column="wish_address" nullable="false"/>
+    <field name="wishDate" type="date" column="wish_date" nullable="false"/>
+    <field name="wishDesc" type="text" column="wish_desc" nullable="false"/>
+  </entity>
+</doctrine-mapping>

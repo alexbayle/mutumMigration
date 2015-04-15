@@ -1,0 +1,88 @@
+<?php
+
+namespace Mutum\Bundle\V1Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * PozMessage
+ *
+ * @ORM\Table(name="poz_message", indexes={@ORM\Index(name="entry_message_msg_user_id", columns={"msg_user_id"}), @ORM\Index(name="entry_message_msg_dest_user_id", columns={"msg_dest_user_id"})})
+ * @ORM\Entity
+ */
+class PozMessage
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="msg_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $msgId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="msg_user_id", type="integer", nullable=false)
+     */
+    private $msgUserId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="msg_dest_user_id", type="integer", nullable=false)
+     */
+    private $msgDestUserId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="msg_art_id", type="integer", nullable=false)
+     */
+    private $msgArtId;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="msg_datetime", type="datetime", nullable=false)
+     */
+    private $msgDatetime;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="msg_text", type="text", nullable=false)
+     */
+    private $msgText;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="msg_read_from", type="string", length=1, nullable=false)
+     */
+    private $msgReadFrom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="msg_read_dest", type="string", length=1, nullable=false)
+     */
+    private $msgReadDest;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="msg_deleted_from", type="string", length=1, nullable=false)
+     */
+    private $msgDeletedFrom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="msg_deleted_dest", type="string", length=1, nullable=false)
+     */
+    private $msgDeletedDest;
+
+
+}

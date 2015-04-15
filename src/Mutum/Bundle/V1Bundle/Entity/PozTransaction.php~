@@ -1,0 +1,60 @@
+<?php
+
+namespace Mutum\Bundle\V1Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * PozTransaction
+ *
+ * @ORM\Table(name="poz_transaction")
+ * @ORM\Entity
+ */
+class PozTransaction
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="transaction_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $transactionId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="transaction_user_id", type="integer", nullable=false)
+     */
+    private $transactionUserId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="transaction_buy_id", type="integer", nullable=false)
+     */
+    private $transactionBuyId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="transaction_payin_id", type="integer", nullable=false)
+     */
+    private $transactionPayinId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="transaction_card_id", type="integer", nullable=false)
+     */
+    private $transactionCardId;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="transaction_datetime", type="datetime", nullable=false)
+     */
+    private $transactionDatetime;
+
+
+}

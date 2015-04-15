@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Transaction" table="transaction">
+    <indexes>
+      <index name="tran_user_id" columns="tran_user_id"/>
+      <index name="tran_offer" columns="tran_offer"/>
+    </indexes>
+    <id name="tranId" type="integer" column="tran_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="tranOffer" type="integer" column="tran_offer" nullable="true"/>
+    <field name="tranPayinId" type="integer" column="tran_payin_id" nullable="false"/>
+    <field name="tranCardId" type="integer" column="tran_card_id" nullable="false"/>
+    <field name="tranDateCreation" type="datetime" column="tran_date_creation" nullable="false"/>
+    <field name="tranUserId" type="integer" column="tran_user_id" nullable="false"/>
+  </entity>
+</doctrine-mapping>

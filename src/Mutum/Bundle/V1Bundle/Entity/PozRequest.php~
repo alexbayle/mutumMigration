@@ -1,0 +1,235 @@
+<?php
+
+namespace Mutum\Bundle\V1Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * PozRequest
+ *
+ * @ORM\Table(name="poz_request")
+ * @ORM\Entity
+ */
+class PozRequest
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="req_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $reqId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="req_user_id", type="integer", nullable=false)
+     */
+    private $reqUserId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="req_art_user_id", type="integer", nullable=false)
+     */
+    private $reqArtUserId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="req_art_id", type="integer", nullable=false)
+     */
+    private $reqArtId;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="req_datetime", type="datetime", nullable=false)
+     */
+    private $reqDatetime;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="req_date_from", type="date", nullable=false)
+     */
+    private $reqDateFrom;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="req_date_to", type="date", nullable=false)
+     */
+    private $reqDateTo;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="req_date_next", type="date", nullable=true)
+     */
+    private $reqDateNext;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="req_message_next", type="text", nullable=false)
+     */
+    private $reqMessageNext;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="req_pts_next", type="integer", nullable=false)
+     */
+    private $reqPtsNext;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="req_pts", type="integer", nullable=false)
+     */
+    private $reqPts;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="req_message", type="text", nullable=false)
+     */
+    private $reqMessage;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="req_code", type="string", length=6, nullable=false)
+     */
+    private $reqCode;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="req_caution", type="integer", nullable=false)
+     */
+    private $reqCaution;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="req_card_id", type="integer", nullable=false)
+     */
+    private $reqCardId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="req_caution_ask", type="integer", nullable=false)
+     */
+    private $reqCautionAsk;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="req_caution_motif", type="string", length=255, nullable=false)
+     */
+    private $reqCautionMotif;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="req_caution_message", type="text", nullable=false)
+     */
+    private $reqCautionMessage;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="req_caution_ask_date", type="date", nullable=false)
+     */
+    private $reqCautionAskDate;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="req_caution_bank_refund", type="integer", nullable=false)
+     */
+    private $reqCautionBankRefund;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="req_caution_seen", type="integer", nullable=false)
+     */
+    private $reqCautionSeen;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="req_caution_refuse_message", type="text", nullable=false)
+     */
+    private $reqCautionRefuseMessage;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="req_caution_reported", type="integer", nullable=false)
+     */
+    private $reqCautionReported;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="req_status", type="string", length=1, nullable=false)
+     */
+    private $reqStatus;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="req_preteur_note", type="integer", nullable=false)
+     */
+    private $reqPreteurNote;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="req_emprunteur_note", type="integer", nullable=false)
+     */
+    private $reqEmprunteurNote;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="req_art_note", type="integer", nullable=false)
+     */
+    private $reqArtNote;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="req_preteur_archive", type="integer", nullable=false)
+     */
+    private $reqPreteurArchive;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="req_emprunteur_archive", type="integer", nullable=false)
+     */
+    private $reqEmprunteurArchive;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="req_emprunteur_read", type="integer", nullable=false)
+     */
+    private $reqEmprunteurRead;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="req_preteur_read", type="integer", nullable=false)
+     */
+    private $reqPreteurRead;
+
+
+}

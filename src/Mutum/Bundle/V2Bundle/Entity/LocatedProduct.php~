@@ -1,0 +1,34 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * LocatedProduct
+ *
+ * @ORM\Table(name="located_product", indexes={@ORM\Index(name="locp_addr_id", columns={"locp_addr_id"})})
+ * @ORM\Entity
+ */
+class LocatedProduct
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="locp_prod_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $locpProdId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="locp_addr_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $locpAddrId;
+
+
+}

@@ -1,0 +1,46 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * CautionRefuse
+ *
+ * @ORM\Table(name="caution_refuse")
+ * @ORM\Entity
+ */
+class CautionRefuse
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="caur_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $caurId;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="caur_reported", type="boolean", nullable=false)
+     */
+    private $caurReported;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="caur_reported_message", type="text", nullable=false)
+     */
+    private $caurReportedMessage;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="caur_message", type="text", nullable=false)
+     */
+    private $caurMessage;
+
+
+}

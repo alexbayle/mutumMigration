@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="PozNotation" table="poz_notation">
+    <indexes>
+      <index name="notation_user_id" columns="notation_user_id"/>
+      <index name="notation_noter_user_id" columns="notation_noter_user_id"/>
+    </indexes>
+    <id name="notationId" type="integer" column="notation_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="notationType" type="string" column="notation_type" length="1" nullable="false"/>
+    <field name="notationDatetime" type="datetime" column="notation_datetime" nullable="false"/>
+    <field name="notationReqId" type="integer" column="notation_req_id" nullable="false"/>
+    <field name="notationUserId" type="integer" column="notation_user_id" nullable="false"/>
+    <field name="notationNoterUserId" type="integer" column="notation_noter_user_id" nullable="false"/>
+    <field name="notationArtId" type="integer" column="notation_art_id" nullable="false"/>
+    <field name="notationTitle" type="string" column="notation_title" length="60" nullable="false"/>
+    <field name="notationText" type="text" column="notation_text" nullable="false"/>
+    <field name="notationNote" type="integer" column="notation_note" nullable="false"/>
+  </entity>
+</doctrine-mapping>

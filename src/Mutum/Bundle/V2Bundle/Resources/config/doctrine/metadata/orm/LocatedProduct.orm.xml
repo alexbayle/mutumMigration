@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="LocatedProduct" table="located_product">
+    <indexes>
+      <index name="locp_addr_id" columns="locp_addr_id"/>
+    </indexes>
+    <id name="locpProdId" type="integer" column="locp_prod_id"/>
+    <id name="locpAddrId" type="integer" column="locp_addr_id"/>
+  </entity>
+</doctrine-mapping>

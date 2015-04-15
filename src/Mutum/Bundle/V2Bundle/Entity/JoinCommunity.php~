@@ -1,0 +1,55 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * JoinCommunity
+ *
+ * @ORM\Table(name="join_community", indexes={@ORM\Index(name="join_user_id", columns={"join_user_id"})})
+ * @ORM\Entity
+ */
+class JoinCommunity
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="join_comm_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $joinCommId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="join_user_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $joinUserId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="join_rank", type="string", length=255, nullable=false)
+     */
+    private $joinRank;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="join_status", type="string", length=1, nullable=false)
+     */
+    private $joinStatus;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="join_desc", type="text", nullable=false)
+     */
+    private $joinDesc;
+
+
+}

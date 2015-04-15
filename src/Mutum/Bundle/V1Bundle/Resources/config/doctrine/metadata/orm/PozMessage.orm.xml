@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="PozMessage" table="poz_message">
+    <indexes>
+      <index name="entry_message_msg_user_id" columns="msg_user_id"/>
+      <index name="entry_message_msg_dest_user_id" columns="msg_dest_user_id"/>
+    </indexes>
+    <id name="msgId" type="integer" column="msg_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="msgUserId" type="integer" column="msg_user_id" nullable="false"/>
+    <field name="msgDestUserId" type="integer" column="msg_dest_user_id" nullable="false"/>
+    <field name="msgArtId" type="integer" column="msg_art_id" nullable="false"/>
+    <field name="msgDatetime" type="datetime" column="msg_datetime" nullable="false"/>
+    <field name="msgText" type="text" column="msg_text" nullable="false"/>
+    <field name="msgReadFrom" type="string" column="msg_read_from" length="1" nullable="false"/>
+    <field name="msgReadDest" type="string" column="msg_read_dest" length="1" nullable="false"/>
+    <field name="msgDeletedFrom" type="string" column="msg_deleted_from" length="1" nullable="false"/>
+    <field name="msgDeletedDest" type="string" column="msg_deleted_dest" length="1" nullable="false"/>
+  </entity>
+</doctrine-mapping>

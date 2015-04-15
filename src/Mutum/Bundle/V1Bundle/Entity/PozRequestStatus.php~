@@ -1,0 +1,46 @@
+<?php
+
+namespace Mutum\Bundle\V1Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * PozRequestStatus
+ *
+ * @ORM\Table(name="poz_request_status")
+ * @ORM\Entity
+ */
+class PozRequestStatus
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="requeststatus_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $requeststatusId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="requeststatus_name", type="string", length=255, nullable=false)
+     */
+    private $requeststatusName;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="requeststatus_emprunteur", type="string", length=255, nullable=false)
+     */
+    private $requeststatusEmprunteur;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="requeststatus_preteur", type="string", length=255, nullable=false)
+     */
+    private $requeststatusPreteur;
+
+
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="NotificationMail" table="notification_mail">
+    <indexes>
+      <index name="notc_id" columns="notm_notc_id"/>
+    </indexes>
+    <id name="notmId" type="integer" column="notm_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="notmName" type="string" column="notm_name" length="255" nullable="false"/>
+    <field name="notmShort" type="string" column="notm_short" length="255" nullable="false"/>
+    <field name="notmNotcId" type="integer" column="notm_notc_id" nullable="false"/>
+  </entity>
+</doctrine-mapping>

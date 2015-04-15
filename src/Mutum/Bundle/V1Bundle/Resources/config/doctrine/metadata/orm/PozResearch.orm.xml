@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="PozResearch" table="poz_research">
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="researchId" type="string" column="research_id" length="15" nullable="false"/>
+    <field name="researchText" type="string" column="research_text" length="255" nullable="false"/>
+    <field name="researchCat" type="integer" column="research_cat" nullable="false"/>
+    <field name="researchLocation" type="string" column="research_location" length="255" nullable="false"/>
+    <field name="researchResults" type="integer" column="research_results" nullable="false"/>
+    <field name="researchCreated" type="datetime" column="research_created" nullable="false"/>
+  </entity>
+</doctrine-mapping>

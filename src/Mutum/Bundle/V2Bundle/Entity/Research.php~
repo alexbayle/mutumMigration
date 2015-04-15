@@ -1,0 +1,74 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Research
+ *
+ * @ORM\Table(name="research", indexes={@ORM\Index(name="rese_user_id", columns={"rese_user_id"}), @ORM\Index(name="rese_type", columns={"rese_cat"})})
+ * @ORM\Entity
+ */
+class Research
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="rese_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $reseId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="rese_user_id", type="integer", nullable=false)
+     */
+    private $reseUserId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="rese_text", type="string", length=255, nullable=false)
+     */
+    private $reseText;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="rese_location", type="string", length=255, nullable=false)
+     */
+    private $reseLocation;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="rese_cat", type="integer", nullable=false)
+     */
+    private $reseCat;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="rese_results", type="integer", nullable=false)
+     */
+    private $reseResults;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="rese_date_creation", type="datetime", nullable=false)
+     */
+    private $reseDateCreation;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="rese_ip", type="string", length=15, nullable=false)
+     */
+    private $reseIp;
+
+
+}

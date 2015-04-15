@@ -1,0 +1,67 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * CategoryArticle
+ *
+ * @ORM\Table(name="category_article", indexes={@ORM\Index(name="cate_parent_id", columns={"cata_parent_id"})})
+ * @ORM\Entity
+ */
+class CategoryArticle
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="cata_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $cataId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="cata_parent_id", type="integer", nullable=true)
+     */
+    private $cataParentId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cata_name", type="string", length=255, nullable=false)
+     */
+    private $cataName;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cata_desc", type="text", nullable=false)
+     */
+    private $cataDesc;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="cata_order", type="integer", nullable=false)
+     */
+    private $cataOrder;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cata_pictogramme", type="string", length=255, nullable=false)
+     */
+    private $cataPictogramme;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="cata_length", type="integer", nullable=false)
+     */
+    private $cataLength;
+
+
+}

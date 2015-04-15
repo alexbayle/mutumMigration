@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Prolongation" table="prolongation">
+    <indexes>
+      <index name="prol_requ_id" columns="prol_requ_id"/>
+    </indexes>
+    <id name="prolId" type="integer" column="prol_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="prolRequId" type="integer" column="prol_requ_id" nullable="false"/>
+    <field name="prolCredit" type="integer" column="prol_credit" nullable="false"/>
+    <field name="prolDate" type="date" column="prol_date" nullable="false"/>
+    <field name="prolMessage" type="text" column="prol_message" nullable="false"/>
+  </entity>
+</doctrine-mapping>

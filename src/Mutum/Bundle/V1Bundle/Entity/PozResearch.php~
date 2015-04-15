@@ -1,0 +1,67 @@
+<?php
+
+namespace Mutum\Bundle\V1Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * PozResearch
+ *
+ * @ORM\Table(name="poz_research")
+ * @ORM\Entity
+ */
+class PozResearch
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="research_id", type="string", length=15, nullable=false)
+     */
+    private $researchId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="research_text", type="string", length=255, nullable=false)
+     */
+    private $researchText;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="research_cat", type="integer", nullable=false)
+     */
+    private $researchCat;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="research_location", type="string", length=255, nullable=false)
+     */
+    private $researchLocation;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="research_results", type="integer", nullable=false)
+     */
+    private $researchResults;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="research_created", type="datetime", nullable=false)
+     */
+    private $researchCreated;
+
+
+}

@@ -1,0 +1,60 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * CautionAsk
+ *
+ * @ORM\Table(name="caution_ask", indexes={@ORM\Index(name="caua_caur_id", columns={"caua_caur_id"})})
+ * @ORM\Entity
+ */
+class CautionAsk
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="caua_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $cauaId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="caua_amount", type="integer", nullable=false)
+     */
+    private $cauaAmount;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="caua_motif", type="string", length=255, nullable=false)
+     */
+    private $cauaMotif;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="caua_message", type="text", nullable=false)
+     */
+    private $cauaMessage;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="caua_ask_date", type="datetime", nullable=false)
+     */
+    private $cauaAskDate;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="caua_caur_id", type="integer", nullable=true)
+     */
+    private $cauaCaurId;
+
+
+}

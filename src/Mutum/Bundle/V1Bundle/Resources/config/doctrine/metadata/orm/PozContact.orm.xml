@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="PozContact" table="poz_contact">
+    <indexes>
+      <index name="contact_user_id" columns="contact_user_id"/>
+      <index name="contact_dest_user_id" columns="contact_dest_user_id"/>
+    </indexes>
+    <id name="contactId" type="integer" column="contact_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="contactUserId" type="integer" column="contact_user_id" nullable="false"/>
+    <field name="contactDestUserId" type="integer" column="contact_dest_user_id" nullable="false"/>
+    <field name="contactDateCreation" type="datetime" column="contact_date_creation" nullable="false"/>
+    <field name="contactDateAccept" type="datetime" column="contact_date_accept" nullable="false"/>
+    <field name="contactStatus" type="string" column="contact_status" length="1" nullable="false"/>
+  </entity>
+</doctrine-mapping>

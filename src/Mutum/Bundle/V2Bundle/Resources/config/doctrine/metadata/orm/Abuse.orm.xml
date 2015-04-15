@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Abuse" table="abuse">
+    <indexes>
+      <index name="fk_abuse_type" columns="abus_type"/>
+    </indexes>
+    <id name="abusId" type="integer" column="abus_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="abusType" type="integer" column="abus_type" nullable="false"/>
+    <field name="abusTableId" type="integer" column="abus_table_id" nullable="false"/>
+    <field name="abusTitle" type="string" column="abus_title" length="255" nullable="false"/>
+    <field name="abusText" type="string" column="abus_text" length="255" nullable="false"/>
+    <field name="abusDateCreation" type="datetime" column="abus_date_creation" nullable="false"/>
+    <field name="abusAborted" type="boolean" column="abus_aborted" nullable="false"/>
+    <field name="abusSeen" type="boolean" column="abus_seen" nullable="false"/>
+    <field name="abusArchived" type="boolean" column="abus_archived" nullable="false"/>
+  </entity>
+</doctrine-mapping>

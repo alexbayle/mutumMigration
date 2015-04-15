@@ -1,0 +1,88 @@
+<?php
+
+namespace Mutum\Bundle\V1Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * PozNotation
+ *
+ * @ORM\Table(name="poz_notation", indexes={@ORM\Index(name="notation_user_id", columns={"notation_user_id"}), @ORM\Index(name="notation_noter_user_id", columns={"notation_noter_user_id"})})
+ * @ORM\Entity
+ */
+class PozNotation
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="notation_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $notationId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="notation_type", type="string", length=1, nullable=false)
+     */
+    private $notationType;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="notation_datetime", type="datetime", nullable=false)
+     */
+    private $notationDatetime;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="notation_req_id", type="integer", nullable=false)
+     */
+    private $notationReqId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="notation_user_id", type="integer", nullable=false)
+     */
+    private $notationUserId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="notation_noter_user_id", type="integer", nullable=false)
+     */
+    private $notationNoterUserId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="notation_art_id", type="integer", nullable=false)
+     */
+    private $notationArtId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="notation_title", type="string", length=60, nullable=false)
+     */
+    private $notationTitle;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="notation_text", type="text", nullable=false)
+     */
+    private $notationText;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="notation_note", type="integer", nullable=false)
+     */
+    private $notationNote;
+
+
+}

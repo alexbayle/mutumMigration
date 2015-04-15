@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="PozSponsor" table="poz_sponsor">
+    <id name="sponsorEmail" type="string" column="sponsor_email" length="255">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="sponsorUserId" type="integer" column="sponsor_user_id" nullable="false"/>
+    <field name="sponsorAdded" type="datetime" column="sponsor_added" nullable="false"/>
+    <field name="sponsorUnsubscribeCode" type="string" column="sponsor_unsubscribe_code" length="16" nullable="false"/>
+  </entity>
+</doctrine-mapping>

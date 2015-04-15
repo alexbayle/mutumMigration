@@ -1,0 +1,60 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Transaction
+ *
+ * @ORM\Table(name="transaction", indexes={@ORM\Index(name="tran_user_id", columns={"tran_user_id"}), @ORM\Index(name="tran_offer", columns={"tran_offer"})})
+ * @ORM\Entity
+ */
+class Transaction
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tran_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $tranId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tran_offer", type="integer", nullable=true)
+     */
+    private $tranOffer;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tran_payin_id", type="integer", nullable=false)
+     */
+    private $tranPayinId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tran_card_id", type="integer", nullable=false)
+     */
+    private $tranCardId;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="tran_date_creation", type="datetime", nullable=false)
+     */
+    private $tranDateCreation;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tran_user_id", type="integer", nullable=false)
+     */
+    private $tranUserId;
+
+
+}

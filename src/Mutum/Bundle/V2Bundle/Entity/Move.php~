@@ -1,0 +1,60 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Move
+ *
+ * @ORM\Table(name="move", indexes={@ORM\Index(name="move_user_id", columns={"move_user_id"}), @ORM\Index(name="move_article_id", columns={"move_article_id"})})
+ * @ORM\Entity
+ */
+class Move
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="move_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $moveId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="move_user_id", type="integer", nullable=false)
+     */
+    private $moveUserId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="move_article_id", type="integer", nullable=true)
+     */
+    private $moveArticleId;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="move_date_creation", type="datetime", nullable=false)
+     */
+    private $moveDateCreation;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="move_type", type="string", length=255, nullable=false)
+     */
+    private $moveType;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="move_amount", type="integer", nullable=false)
+     */
+    private $moveAmount;
+
+
+}

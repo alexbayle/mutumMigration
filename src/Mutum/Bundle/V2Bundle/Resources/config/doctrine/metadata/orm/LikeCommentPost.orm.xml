@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="LikeCommentPost" table="like_comment_post">
+    <id name="likcUserId" type="integer" column="likc_user_id"/>
+    <id name="likcCompId" type="integer" column="likc_comp_id"/>
+  </entity>
+</doctrine-mapping>

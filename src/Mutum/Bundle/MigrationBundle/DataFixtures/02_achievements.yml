@@ -1,0 +1,36 @@
+\Mutum\Bundle\V2Bundle\Entity\Achievements:
+    achievements_01:
+        achiName: "Finir son inscription jusqu'à la fin"
+        achiTitle: "Finir son inscription jusqu'à la fin"
+        achiDesc: "Finir son inscription jusqu'à la fin"
+        achiCat: ~
+        achiOrder: 1
+        achiWin: 30
+        achiCondition: register
+
+    achievements_02:
+        achiName: "Référencer son premier objet avec photo"
+        achiTitle: "Référencer son premier objet avec photo"
+        achiDesc: "Référencer son premier objet avec photo"
+        achiCat: ~
+        achiOrder: 2
+        achiWin: 10
+        achiCondition: new.1
+
+    achievements_03:
+        achiName: "Référencer 5 objets avec photo"
+        achiTitle: "Référencer 5 objets avec photo"
+        achiDesc: "Référencer 5 objets avec photo"
+        achiCat: ~
+        achiOrder: 3
+        achiWin: 20
+        achiCondition: new.5
+
+    achievements_04:
+        achiName: "Référencer 25 objets avec photo"
+        achiTitle: "Référencer 25 objets avec photo"
+        achiDesc: "Référencer 25 objets avec photo"
+        achiCat: ~
+        achiOrder: 4
+        achiWin: 20
+        achiCondition: new.10

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Sponsor" table="sponsor">
+    <id name="sponUserId" type="integer" column="spon_user_id"/>
+    <id name="sponEmail" type="string" column="spon_email" length="255"/>
+    <field name="sponDateCreation" type="datetime" column="spon_date_creation" nullable="false"/>
+    <field name="sponUnsubscribeCode" type="string" column="spon_unsubscribe_code" length="255" nullable="false"/>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Notation" table="notation">
+    <indexes>
+      <index name="nota_user_id" columns="nota_user_id"/>
+      <index name="nota_noter_user_id" columns="nota_dest_user_id"/>
+      <index name="nota_prod_id" columns="nota_prod_id"/>
+    </indexes>
+    <id name="notaId" type="integer" column="nota_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="notaUserId" type="integer" column="nota_user_id" nullable="false"/>
+    <field name="notaDestUserId" type="integer" column="nota_dest_user_id" nullable="false"/>
+    <field name="notaProdId" type="integer" column="nota_prod_id" nullable="false"/>
+    <field name="notaType" type="string" column="nota_type" length="1" nullable="false"/>
+    <field name="notaDateCreation" type="datetime" column="nota_date_creation" nullable="false"/>
+    <field name="notaTitle" type="string" column="nota_title" length="255" nullable="false"/>
+    <field name="notaMessage" type="text" column="nota_message" nullable="false"/>
+    <field name="notaNote" type="integer" column="nota_note" nullable="false"/>
+  </entity>
+</doctrine-mapping>

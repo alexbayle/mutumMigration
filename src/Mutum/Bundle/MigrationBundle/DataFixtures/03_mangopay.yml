@@ -1,0 +1,6 @@
+Mutum\Bundle\V2Bundle\Entity\Mangopay:
+    mangopay_01:
+        mangName:       mutumtest
+        mangPass:       Q1xzFqpVtna4BaFpCNeCzkkF5nshmmFvSTyuoYPe5pkUjr0Dx7
+        mangLegalUser:  3810088
+        mangWallet:     3866293

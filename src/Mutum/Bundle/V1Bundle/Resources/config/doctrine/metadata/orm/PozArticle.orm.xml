@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="PozArticle" table="poz_article">
+    <indexes>
+      <index name="poz_article_art_user_id" columns="art_user_id"/>
+    </indexes>
+    <id name="artId" type="integer" column="art_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="artUserId" type="integer" column="art_user_id" nullable="false"/>
+    <field name="artName" type="string" column="art_name" length="60" nullable="false"/>
+    <field name="artCatId" type="integer" column="art_cat_id" nullable="false"/>
+    <field name="artPrice" type="integer" column="art_price" nullable="false"/>
+    <field name="artLength" type="integer" column="art_length" nullable="false"/>
+    <field name="artState" type="string" column="art_state" length="15" nullable="false"/>
+    <field name="artDesc" type="text" column="art_desc" nullable="false"/>
+    <field name="artDispo" type="string" column="art_dispo" length="1" nullable="false"/>
+    <field name="artVisible" type="string" column="art_visible" length="1" nullable="false"/>
+    <field name="artCaution" type="integer" column="art_caution" nullable="false"/>
+    <field name="artDates" type="text" column="art_dates" nullable="false"/>
+    <field name="artPictures" type="text" column="art_pictures" nullable="false"/>
+    <field name="artAddress" type="string" column="art_address" length="60" nullable="false"/>
+    <field name="artZip" type="string" column="art_zip" length="5" nullable="false"/>
+    <field name="artCity" type="string" column="art_city" length="40" nullable="false"/>
+    <field name="artLatitude" type="decimal" column="art_latitude" precision="18" scale="14" nullable="false"/>
+    <field name="artLongitude" type="decimal" column="art_longitude" precision="18" scale="14" nullable="false"/>
+    <field name="artWin" type="integer" column="art_win" nullable="false"/>
+    <field name="artAdded" type="datetime" column="art_added" nullable="false"/>
+    <field name="artNotation" type="integer" column="art_notation" nullable="false"/>
+    <field name="artNbNotation" type="integer" column="art_nb_notation" nullable="false"/>
+    <field name="artDeleted" type="string" column="art_deleted" length="1" nullable="false"/>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Caution" table="caution">
+    <indexes>
+      <index name="caut_caua_id" columns="caut_caua_id"/>
+    </indexes>
+    <id name="cautId" type="integer" column="caut_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="cautAmount" type="integer" column="caut_amount" nullable="false"/>
+    <field name="cautCardId" type="integer" column="caut_card_id" nullable="false"/>
+    <field name="cautCauaId" type="integer" column="caut_caua_id" nullable="true"/>
+  </entity>
+</doctrine-mapping>

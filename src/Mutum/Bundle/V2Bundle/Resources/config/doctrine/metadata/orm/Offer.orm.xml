@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Offer" table="offer">
+    <id name="offeId" type="integer" column="offe_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="offeName" type="string" column="offe_name" length="255" nullable="false"/>
+    <field name="offePrice" type="integer" column="offe_price" nullable="false"/>
+    <field name="offePresent" type="integer" column="offe_present" nullable="false"/>
+    <field name="offeActive" type="boolean" column="offe_active" nullable="false"/>
+  </entity>
+</doctrine-mapping>

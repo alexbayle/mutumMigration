@@ -1,0 +1,46 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * CommentPost
+ *
+ * @ORM\Table(name="comment_post", indexes={@ORM\Index(name="comp_post_id", columns={"comp_post_id"}), @ORM\Index(name="comp_user_id", columns={"comp_user_id"})})
+ * @ORM\Entity
+ */
+class CommentPost
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="comp_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $compId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="comp_text", type="text", nullable=false)
+     */
+    private $compText;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="comp_post_id", type="integer", nullable=false)
+     */
+    private $compPostId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="comp_user_id", type="integer", nullable=false)
+     */
+    private $compUserId;
+
+
+}

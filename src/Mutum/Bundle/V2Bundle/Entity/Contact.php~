@@ -1,0 +1,55 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Contact
+ *
+ * @ORM\Table(name="contact", indexes={@ORM\Index(name="cont_user_id_b", columns={"cont_user_id_b"})})
+ * @ORM\Entity
+ */
+class Contact
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="cont_user_id_a", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $contUserIdA;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="cont_user_id_b", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $contUserIdB;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="cont_date_creation", type="datetime", nullable=false)
+     */
+    private $contDateCreation;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="cont_date_accepted", type="datetime", nullable=true)
+     */
+    private $contDateAccepted;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cont_status", type="string", length=1, nullable=false)
+     */
+    private $contStatus;
+
+
+}

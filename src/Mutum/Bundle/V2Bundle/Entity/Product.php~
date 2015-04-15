@@ -1,0 +1,88 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Product
+ *
+ * @ORM\Table(name="product", indexes={@ORM\Index(name="prod_user_id", columns={"prod_user_id"}), @ORM\Index(name="prod_limitation", columns={"prod_limitation"})})
+ * @ORM\Entity
+ */
+class Product
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="prod_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $prodId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="prod_user_id", type="integer", nullable=false)
+     */
+    private $prodUserId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prod_name", type="string", length=255, nullable=false)
+     */
+    private $prodName;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prod_desc", type="text", nullable=false)
+     */
+    private $prodDesc;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="prod_limitation", type="integer", nullable=true)
+     */
+    private $prodLimitation;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="prod_win", type="integer", nullable=true)
+     */
+    private $prodWin;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="prod_notation", type="integer", nullable=true)
+     */
+    private $prodNotation;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="prod_nb_notation", type="integer", nullable=false)
+     */
+    private $prodNbNotation;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="prod_date_creation", type="datetime", nullable=false)
+     */
+    private $prodDateCreation;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="prod_deleted", type="boolean", nullable=false)
+     */
+    private $prodDeleted;
+
+
+}

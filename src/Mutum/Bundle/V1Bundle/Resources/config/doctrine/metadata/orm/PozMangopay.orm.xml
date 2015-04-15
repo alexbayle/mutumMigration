@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="PozMangopay" table="poz_mangopay">
+    <id name="mangopayId" type="integer" column="mangopay_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="mangopayName" type="string" column="mangopay_name" length="255" nullable="false"/>
+    <field name="mangopayPass" type="string" column="mangopay_pass" length="255" nullable="false"/>
+    <field name="mangopayLegalUser" type="string" column="mangopay_legal_user" length="255" nullable="false"/>
+    <field name="mangopayWallet" type="string" column="mangopay_wallet" length="255" nullable="false"/>
+  </entity>
+</doctrine-mapping>

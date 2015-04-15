@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Mangopay" table="mangopay">
+    <id name="mangId" type="integer" column="mang_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="mangName" type="string" column="mang_name" length="255" nullable="false"/>
+    <field name="mangPass" type="string" column="mang_pass" length="255" nullable="false"/>
+    <field name="mangLegalUser" type="string" column="mang_legal_user" length="255" nullable="false"/>
+    <field name="mangWallet" type="string" column="mang_wallet" length="255" nullable="false"/>
+  </entity>
+</doctrine-mapping>

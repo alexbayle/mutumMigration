@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="LikePost" table="like_post">
+    <indexes>
+      <index name="likp_post_id" columns="likp_post_id"/>
+    </indexes>
+    <id name="likpUserId" type="integer" column="likp_user_id"/>
+    <id name="likpPostId" type="integer" column="likp_post_id"/>
+  </entity>
+</doctrine-mapping>

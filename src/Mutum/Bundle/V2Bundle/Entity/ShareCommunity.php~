@@ -1,0 +1,34 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * ShareCommunity
+ *
+ * @ORM\Table(name="share_community", indexes={@ORM\Index(name="shac_comm_id", columns={"shac_comm_id"})})
+ * @ORM\Entity
+ */
+class ShareCommunity
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="shac_prod_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $shacProdId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="shac_comm_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $shacCommId;
+
+
+}

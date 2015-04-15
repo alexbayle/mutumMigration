@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Post" table="post">
+    <indexes>
+      <index name="post_user_id" columns="post_user_id"/>
+      <index name="post_comm_id" columns="post_limitation"/>
+      <index name="post_cat" columns="post_cat"/>
+    </indexes>
+    <id name="postId" type="integer" column="post_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="postUserId" type="integer" column="post_user_id" nullable="false"/>
+    <field name="postLimitation" type="integer" column="post_limitation" nullable="true"/>
+    <field name="postText" type="text" column="post_text" nullable="false"/>
+    <field name="postCat" type="integer" column="post_cat" nullable="false"/>
+    <field name="postDateCreation" type="datetime" column="post_date_creation" nullable="false"/>
+    <field name="postDeleted" type="boolean" column="post_deleted" nullable="false"/>
+  </entity>
+</doctrine-mapping>

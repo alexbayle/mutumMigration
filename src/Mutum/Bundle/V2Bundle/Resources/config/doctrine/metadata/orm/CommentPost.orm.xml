@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="CommentPost" table="comment_post">
+    <indexes>
+      <index name="comp_post_id" columns="comp_post_id"/>
+      <index name="comp_user_id" columns="comp_user_id"/>
+    </indexes>
+    <id name="compId" type="integer" column="comp_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="compText" type="text" column="comp_text" nullable="false"/>
+    <field name="compPostId" type="integer" column="comp_post_id" nullable="false"/>
+    <field name="compUserId" type="integer" column="comp_user_id" nullable="false"/>
+  </entity>
+</doctrine-mapping>

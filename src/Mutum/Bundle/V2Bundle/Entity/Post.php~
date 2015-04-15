@@ -1,0 +1,67 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Post
+ *
+ * @ORM\Table(name="post", indexes={@ORM\Index(name="post_user_id", columns={"post_user_id"}), @ORM\Index(name="post_comm_id", columns={"post_limitation"}), @ORM\Index(name="post_cat", columns={"post_cat"})})
+ * @ORM\Entity
+ */
+class Post
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="post_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $postId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="post_user_id", type="integer", nullable=false)
+     */
+    private $postUserId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="post_limitation", type="integer", nullable=true)
+     */
+    private $postLimitation;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="post_text", type="text", nullable=false)
+     */
+    private $postText;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="post_cat", type="integer", nullable=false)
+     */
+    private $postCat;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="post_date_creation", type="datetime", nullable=false)
+     */
+    private $postDateCreation;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="post_deleted", type="boolean", nullable=false)
+     */
+    private $postDeleted;
+
+
+}

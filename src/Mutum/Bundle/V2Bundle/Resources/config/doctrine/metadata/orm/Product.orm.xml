@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Product" table="product">
+    <indexes>
+      <index name="prod_user_id" columns="prod_user_id"/>
+      <index name="prod_limitation" columns="prod_limitation"/>
+    </indexes>
+    <id name="prodId" type="integer" column="prod_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="prodUserId" type="integer" column="prod_user_id" nullable="false"/>
+    <field name="prodName" type="string" column="prod_name" length="255" nullable="false"/>
+    <field name="prodDesc" type="text" column="prod_desc" nullable="false"/>
+    <field name="prodLimitation" type="integer" column="prod_limitation" nullable="true"/>
+    <field name="prodWin" type="integer" column="prod_win" nullable="true"/>
+    <field name="prodNotation" type="integer" column="prod_notation" nullable="true"/>
+    <field name="prodNbNotation" type="integer" column="prod_nb_notation" nullable="false"/>
+    <field name="prodDateCreation" type="datetime" column="prod_date_creation" nullable="false"/>
+    <field name="prodDeleted" type="boolean" column="prod_deleted" nullable="false"/>
+  </entity>
+</doctrine-mapping>

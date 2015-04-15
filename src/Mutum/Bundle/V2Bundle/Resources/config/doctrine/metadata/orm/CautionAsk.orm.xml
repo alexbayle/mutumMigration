@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="CautionAsk" table="caution_ask">
+    <indexes>
+      <index name="caua_caur_id" columns="caua_caur_id"/>
+    </indexes>
+    <id name="cauaId" type="integer" column="caua_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="cauaAmount" type="integer" column="caua_amount" nullable="false"/>
+    <field name="cauaMotif" type="string" column="caua_motif" length="255" nullable="false"/>
+    <field name="cauaMessage" type="text" column="caua_message" nullable="false"/>
+    <field name="cauaAskDate" type="datetime" column="caua_ask_date" nullable="false"/>
+    <field name="cauaCaurId" type="integer" column="caua_caur_id" nullable="true"/>
+  </entity>
+</doctrine-mapping>

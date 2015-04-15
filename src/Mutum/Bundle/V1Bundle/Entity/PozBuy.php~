@@ -1,0 +1,67 @@
+<?php
+
+namespace Mutum\Bundle\V1Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * PozBuy
+ *
+ * @ORM\Table(name="poz_buy")
+ * @ORM\Entity
+ */
+class PozBuy
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="buy_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $buyId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="buy_name", type="string", length=255, nullable=false)
+     */
+    private $buyName;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="buy_price", type="integer", nullable=false)
+     */
+    private $buyPrice;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="buy_gift", type="integer", nullable=false)
+     */
+    private $buyGift;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="buy_color", type="string", length=255, nullable=false)
+     */
+    private $buyColor;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="buy_color2", type="string", length=255, nullable=false)
+     */
+    private $buyColor2;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="buy_active", type="integer", nullable=false)
+     */
+    private $buyActive;
+
+
+}

@@ -1,0 +1,46 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Caution
+ *
+ * @ORM\Table(name="caution", indexes={@ORM\Index(name="caut_caua_id", columns={"caut_caua_id"})})
+ * @ORM\Entity
+ */
+class Caution
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="caut_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $cautId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="caut_amount", type="integer", nullable=false)
+     */
+    private $cautAmount;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="caut_card_id", type="integer", nullable=false)
+     */
+    private $cautCardId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="caut_caua_id", type="integer", nullable=true)
+     */
+    private $cautCauaId;
+
+
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Caroussel" table="caroussel">
+    <indexes>
+      <index name="caro_user_id" columns="caro_user_id"/>
+      <index name="caro_limitation" columns="caro_limitation"/>
+    </indexes>
+    <id name="caroId" type="integer" column="caro_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="caroLimitation" type="integer" column="caro_limitation" nullable="true"/>
+    <field name="caroText" type="text" column="caro_text" nullable="false"/>
+    <field name="caroUserId" type="integer" column="caro_user_id" nullable="true"/>
+    <field name="caroWeight" type="integer" column="caro_weight" nullable="false"/>
+    <field name="caroDateFrom" type="date" column="caro_date_from" nullable="false"/>
+    <field name="caroDateTo" type="date" column="caro_date_to" nullable="false"/>
+  </entity>
+</doctrine-mapping>

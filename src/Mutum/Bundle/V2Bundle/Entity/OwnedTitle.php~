@@ -1,0 +1,34 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * OwnedTitle
+ *
+ * @ORM\Table(name="owned_title", indexes={@ORM\Index(name="ownt_user_id", columns={"ownt_user_id"})})
+ * @ORM\Entity
+ */
+class OwnedTitle
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="ownt_spec_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $owntSpecId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="ownt_user_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $owntUserId;
+
+
+}

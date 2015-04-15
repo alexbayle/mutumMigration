@@ -1,0 +1,179 @@
+<?php
+
+namespace Mutum\Bundle\V1Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * PozArticle
+ *
+ * @ORM\Table(name="poz_article", indexes={@ORM\Index(name="poz_article_art_user_id", columns={"art_user_id"})})
+ * @ORM\Entity
+ */
+class PozArticle
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="art_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $artId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="art_user_id", type="integer", nullable=false)
+     */
+    private $artUserId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="art_name", type="string", length=60, nullable=false)
+     */
+    private $artName;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="art_cat_id", type="integer", nullable=false)
+     */
+    private $artCatId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="art_price", type="integer", nullable=false)
+     */
+    private $artPrice;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="art_length", type="integer", nullable=false)
+     */
+    private $artLength;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="art_state", type="string", length=15, nullable=false)
+     */
+    private $artState;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="art_desc", type="text", nullable=false)
+     */
+    private $artDesc;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="art_dispo", type="string", length=1, nullable=false)
+     */
+    private $artDispo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="art_visible", type="string", length=1, nullable=false)
+     */
+    private $artVisible;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="art_caution", type="integer", nullable=false)
+     */
+    private $artCaution;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="art_dates", type="text", nullable=false)
+     */
+    private $artDates;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="art_pictures", type="text", nullable=false)
+     */
+    private $artPictures;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="art_address", type="string", length=60, nullable=false)
+     */
+    private $artAddress;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="art_zip", type="string", length=5, nullable=false)
+     */
+    private $artZip;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="art_city", type="string", length=40, nullable=false)
+     */
+    private $artCity;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="art_latitude", type="decimal", precision=18, scale=14, nullable=false)
+     */
+    private $artLatitude;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="art_longitude", type="decimal", precision=18, scale=14, nullable=false)
+     */
+    private $artLongitude;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="art_win", type="integer", nullable=false)
+     */
+    private $artWin;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="art_added", type="datetime", nullable=false)
+     */
+    private $artAdded;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="art_notation", type="integer", nullable=false)
+     */
+    private $artNotation;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="art_nb_notation", type="integer", nullable=false)
+     */
+    private $artNbNotation;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="art_deleted", type="string", length=1, nullable=false)
+     */
+    private $artDeleted;
+
+
+}

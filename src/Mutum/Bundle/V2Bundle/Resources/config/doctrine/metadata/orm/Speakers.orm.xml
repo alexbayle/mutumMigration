@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Speakers" table="speakers">
+    <indexes>
+      <index name="spea_user_id" columns="spea_user_id"/>
+    </indexes>
+    <id name="speaDiscId" type="integer" column="spea_disc_id"/>
+    <id name="speaUserId" type="integer" column="spea_user_id"/>
+    <field name="speaAdmin" type="boolean" column="spea_admin" nullable="false"/>
+    <field name="speaSeen" type="datetime" column="spea_seen" nullable="false"/>
+    <field name="speaArchived" type="boolean" column="spea_archived" nullable="false"/>
+  </entity>
+</doctrine-mapping>

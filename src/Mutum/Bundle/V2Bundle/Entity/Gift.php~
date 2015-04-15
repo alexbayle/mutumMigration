@@ -1,0 +1,67 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Gift
+ *
+ * @ORM\Table(name="gift")
+ * @ORM\Entity
+ */
+class Gift
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="gift_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $giftId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="gift_code", type="string", length=8, nullable=false)
+     */
+    private $giftCode;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="gift_amount", type="integer", nullable=false)
+     */
+    private $giftAmount;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="gift_nb_valid", type="integer", nullable=false)
+     */
+    private $giftNbValid;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="gift_nb_left", type="integer", nullable=false)
+     */
+    private $giftNbLeft;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="gift_date_creation", type="datetime", nullable=false)
+     */
+    private $giftDateCreation;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="gift_expiration", type="datetime", nullable=false)
+     */
+    private $giftExpiration;
+
+
+}

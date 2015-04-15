@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Research" table="research">
+    <indexes>
+      <index name="rese_user_id" columns="rese_user_id"/>
+      <index name="rese_type" columns="rese_cat"/>
+    </indexes>
+    <id name="reseId" type="integer" column="rese_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="reseUserId" type="integer" column="rese_user_id" nullable="false"/>
+    <field name="reseText" type="string" column="rese_text" length="255" nullable="false"/>
+    <field name="reseLocation" type="string" column="rese_location" length="255" nullable="false"/>
+    <field name="reseCat" type="integer" column="rese_cat" nullable="false"/>
+    <field name="reseResults" type="integer" column="rese_results" nullable="false"/>
+    <field name="reseDateCreation" type="datetime" column="rese_date_creation" nullable="false"/>
+    <field name="reseIp" type="string" column="rese_ip" length="15" nullable="false"/>
+  </entity>
+</doctrine-mapping>

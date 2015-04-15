@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="PozTransaction" table="poz_transaction">
+    <id name="transactionId" type="integer" column="transaction_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="transactionUserId" type="integer" column="transaction_user_id" nullable="false"/>
+    <field name="transactionBuyId" type="integer" column="transaction_buy_id" nullable="false"/>
+    <field name="transactionPayinId" type="integer" column="transaction_payin_id" nullable="false"/>
+    <field name="transactionCardId" type="integer" column="transaction_card_id" nullable="false"/>
+    <field name="transactionDatetime" type="datetime" column="transaction_datetime" nullable="false"/>
+  </entity>
+</doctrine-mapping>

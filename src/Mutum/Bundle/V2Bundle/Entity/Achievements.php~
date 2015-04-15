@@ -1,0 +1,74 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Achievements
+ *
+ * @ORM\Table(name="achievements", indexes={@ORM\Index(name="achi_cat", columns={"achi_cat"})})
+ * @ORM\Entity
+ */
+class Achievements
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="achi_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $achiId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="achi_name", type="string", length=255, nullable=false)
+     */
+    private $achiName;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="achi_desc", type="string", length=255, nullable=false)
+     */
+    private $achiDesc;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="achi_title", type="string", length=255, nullable=false)
+     */
+    private $achiTitle;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="achi_cat", type="integer", nullable=true)
+     */
+    private $achiCat;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="achi_order", type="integer", nullable=false)
+     */
+    private $achiOrder;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="achi_win", type="integer", nullable=false)
+     */
+    private $achiWin;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="achi_condition", type="text", nullable=false)
+     */
+    private $achiCondition;
+
+
+}

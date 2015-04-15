@@ -1,0 +1,67 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Community
+ *
+ * @ORM\Table(name="community", indexes={@ORM\Index(name="comm_cat", columns={"comm_cat"}), @ORM\Index(name="comm_address", columns={"comm_address"})})
+ * @ORM\Entity
+ */
+class Community
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="comm_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $commId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="comm_name", type="string", length=255, nullable=false)
+     */
+    private $commName;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="comm_desc", type="text", nullable=false)
+     */
+    private $commDesc;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="comm_address", type="integer", nullable=false)
+     */
+    private $commAddress;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="comm_cat", type="integer", nullable=false)
+     */
+    private $commCat;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="comm_type", type="string", length=255, nullable=false)
+     */
+    private $commType;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="comm_type_data", type="string", length=255, nullable=false)
+     */
+    private $commTypeData;
+
+
+}

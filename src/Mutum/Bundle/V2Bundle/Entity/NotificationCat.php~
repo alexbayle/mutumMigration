@@ -1,0 +1,32 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * NotificationCat
+ *
+ * @ORM\Table(name="notification_cat")
+ * @ORM\Entity
+ */
+class NotificationCat
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="notc_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $notcId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="notc_name", type="string", length=255, nullable=false)
+     */
+    private $notcName;
+
+
+}

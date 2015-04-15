@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="SpecialTitle" table="special_title">
+    <id name="specId" type="integer" column="spec_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="specName" type="string" column="spec_name" length="255" nullable="false"/>
+  </entity>
+</doctrine-mapping>

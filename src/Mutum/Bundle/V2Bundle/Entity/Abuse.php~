@@ -1,0 +1,81 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Abuse
+ *
+ * @ORM\Table(name="abuse", indexes={@ORM\Index(name="fk_abuse_type", columns={"abus_type"})})
+ * @ORM\Entity
+ */
+class Abuse
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="abus_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $abusId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="abus_type", type="integer", nullable=false)
+     */
+    private $abusType;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="abus_table_id", type="integer", nullable=false)
+     */
+    private $abusTableId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="abus_title", type="string", length=255, nullable=false)
+     */
+    private $abusTitle;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="abus_text", type="string", length=255, nullable=false)
+     */
+    private $abusText;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="abus_date_creation", type="datetime", nullable=false)
+     */
+    private $abusDateCreation;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="abus_aborted", type="boolean", nullable=false)
+     */
+    private $abusAborted;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="abus_seen", type="boolean", nullable=false)
+     */
+    private $abusSeen;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="abus_archived", type="boolean", nullable=false)
+     */
+    private $abusArchived;
+
+
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="CommunityAsk" table="community_ask">
+    <indexes>
+      <index name="coma_user_id" columns="coma_user_id"/>
+      <index name="coma_type" columns="coma_type"/>
+    </indexes>
+    <unique-constraints>
+      <unique-constraint name="coma_address" columns="coma_address"/>
+    </unique-constraints>
+    <id name="comaId" type="integer" column="coma_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="comaUserId" type="integer" column="coma_user_id" nullable="false"/>
+    <field name="comaFirstname" type="string" column="coma_firstname" length="255" nullable="false"/>
+    <field name="comaLastname" type="string" column="coma_lastname" length="255" nullable="false"/>
+    <field name="comaNumber" type="integer" column="coma_number" nullable="false"/>
+    <field name="comaAddress" type="integer" column="coma_address" nullable="false"/>
+    <field name="comaName" type="string" column="coma_name" length="255" nullable="false"/>
+    <field name="comaType" type="integer" column="coma_type" nullable="false"/>
+    <field name="comaText" type="text" column="coma_text" nullable="false"/>
+    <field name="comaWant" type="boolean" column="coma_want" nullable="false"/>
+  </entity>
+</doctrine-mapping>

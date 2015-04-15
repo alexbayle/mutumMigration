@@ -1,0 +1,81 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Notation
+ *
+ * @ORM\Table(name="notation", indexes={@ORM\Index(name="nota_user_id", columns={"nota_user_id"}), @ORM\Index(name="nota_noter_user_id", columns={"nota_dest_user_id"}), @ORM\Index(name="nota_prod_id", columns={"nota_prod_id"})})
+ * @ORM\Entity
+ */
+class Notation
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="nota_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $notaId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="nota_user_id", type="integer", nullable=false)
+     */
+    private $notaUserId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="nota_dest_user_id", type="integer", nullable=false)
+     */
+    private $notaDestUserId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="nota_prod_id", type="integer", nullable=false)
+     */
+    private $notaProdId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nota_type", type="string", length=1, nullable=false)
+     */
+    private $notaType;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="nota_date_creation", type="datetime", nullable=false)
+     */
+    private $notaDateCreation;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nota_title", type="string", length=255, nullable=false)
+     */
+    private $notaTitle;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nota_message", type="text", nullable=false)
+     */
+    private $notaMessage;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="nota_note", type="integer", nullable=false)
+     */
+    private $notaNote;
+
+
+}

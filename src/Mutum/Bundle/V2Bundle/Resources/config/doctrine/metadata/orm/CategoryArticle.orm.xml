@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="CategoryArticle" table="category_article">
+    <indexes>
+      <index name="cate_parent_id" columns="cata_parent_id"/>
+    </indexes>
+    <id name="cataId" type="integer" column="cata_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="cataParentId" type="integer" column="cata_parent_id" nullable="true"/>
+    <field name="cataName" type="string" column="cata_name" length="255" nullable="false"/>
+    <field name="cataDesc" type="text" column="cata_desc" nullable="false"/>
+    <field name="cataOrder" type="integer" column="cata_order" nullable="false"/>
+    <field name="cataPictogramme" type="string" column="cata_pictogramme" length="255" nullable="false"/>
+    <field name="cataLength" type="integer" column="cata_length" nullable="false"/>
+  </entity>
+</doctrine-mapping>

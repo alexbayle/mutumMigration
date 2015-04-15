@@ -1,0 +1,34 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * LikePost
+ *
+ * @ORM\Table(name="like_post", indexes={@ORM\Index(name="likp_post_id", columns={"likp_post_id"})})
+ * @ORM\Entity
+ */
+class LikePost
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="likp_user_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $likpUserId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="likp_post_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $likpPostId;
+
+
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="SuccessAchievements" table="success_achievements">
+    <indexes>
+      <index name="suca_achi_id" columns="suca_achi_id"/>
+      <index name="suca_user_id" columns="suca_user_id"/>
+      <index name="created_at" columns="created_at"/>
+    </indexes>
+    <id name="sucaUserId" type="integer" column="suca_user_id"/>
+    <id name="sucaAchiId" type="integer" column="suca_achi_id"/>
+    <field name="createdAt" type="datetime" column="created_at" nullable="false"/>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,67 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Caroussel
+ *
+ * @ORM\Table(name="caroussel", indexes={@ORM\Index(name="caro_user_id", columns={"caro_user_id"}), @ORM\Index(name="caro_limitation", columns={"caro_limitation"})})
+ * @ORM\Entity
+ */
+class Caroussel
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="caro_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $caroId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="caro_limitation", type="integer", nullable=true)
+     */
+    private $caroLimitation;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="caro_text", type="text", nullable=false)
+     */
+    private $caroText;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="caro_user_id", type="integer", nullable=true)
+     */
+    private $caroUserId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="caro_weight", type="integer", nullable=false)
+     */
+    private $caroWeight;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="caro_date_from", type="date", nullable=false)
+     */
+    private $caroDateFrom;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="caro_date_to", type="date", nullable=false)
+     */
+    private $caroDateTo;
+
+
+}

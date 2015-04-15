@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Achievements" table="achievements">
+    <indexes>
+      <index name="achi_cat" columns="achi_cat"/>
+    </indexes>
+    <id name="achiId" type="integer" column="achi_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="achiName" type="string" column="achi_name" length="255" nullable="false"/>
+    <field name="achiDesc" type="string" column="achi_desc" length="255" nullable="false"/>
+    <field name="achiTitle" type="string" column="achi_title" length="255" nullable="false"/>
+    <field name="achiCat" type="integer" column="achi_cat" nullable="true"/>
+    <field name="achiOrder" type="integer" column="achi_order" nullable="false"/>
+    <field name="achiWin" type="integer" column="achi_win" nullable="false"/>
+    <field name="achiCondition" type="text" column="achi_condition" nullable="false"/>
+  </entity>
+</doctrine-mapping>

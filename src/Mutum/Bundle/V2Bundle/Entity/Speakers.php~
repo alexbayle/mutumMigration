@@ -1,0 +1,55 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Speakers
+ *
+ * @ORM\Table(name="speakers", indexes={@ORM\Index(name="spea_user_id", columns={"spea_user_id"})})
+ * @ORM\Entity
+ */
+class Speakers
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="spea_disc_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $speaDiscId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="spea_user_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $speaUserId;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="spea_admin", type="boolean", nullable=false)
+     */
+    private $speaAdmin;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="spea_seen", type="datetime", nullable=false)
+     */
+    private $speaSeen;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="spea_archived", type="boolean", nullable=false)
+     */
+    private $speaArchived;
+
+
+}

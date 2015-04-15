@@ -1,0 +1,46 @@
+<?php
+
+namespace Mutum\Bundle\V1Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * PozSponsor
+ *
+ * @ORM\Table(name="poz_sponsor")
+ * @ORM\Entity
+ */
+class PozSponsor
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="sponsor_email", type="string", length=255, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $sponsorEmail;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="sponsor_user_id", type="integer", nullable=false)
+     */
+    private $sponsorUserId;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="sponsor_added", type="datetime", nullable=false)
+     */
+    private $sponsorAdded;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="sponsor_unsubscribe_code", type="string", length=16, nullable=false)
+     */
+    private $sponsorUnsubscribeCode;
+
+
+}

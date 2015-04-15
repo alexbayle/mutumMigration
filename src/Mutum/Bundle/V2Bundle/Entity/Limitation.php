@@ -1,0 +1,35 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Limitation
+ *
+ * @ORM\Table(name="limitation")
+ * @ORM\Entity
+ */
+class Limitation
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="limi_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $limiId;
+
+
+
+    /**
+     * Get limiId
+     *
+     * @return integer 
+     */
+    public function getLimiId()
+    {
+        return $this->limiId;
+    }
+}

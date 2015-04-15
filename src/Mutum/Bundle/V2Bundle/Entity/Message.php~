@@ -1,0 +1,60 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Message
+ *
+ * @ORM\Table(name="message", indexes={@ORM\Index(name="mess_disc_id", columns={"mess_disc_id"}), @ORM\Index(name="mess_user_id", columns={"mess_user_id"})})
+ * @ORM\Entity
+ */
+class Message
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="mess_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $messId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="mess_user_id", type="integer", nullable=false)
+     */
+    private $messUserId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="mess_text", type="text", nullable=false)
+     */
+    private $messText;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="mess_date_creation", type="datetime", nullable=false)
+     */
+    private $messDateCreation;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="mess_class", type="string", length=255, nullable=false)
+     */
+    private $messClass;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="mess_disc_id", type="integer", nullable=false)
+     */
+    private $messDiscId;
+
+
+}

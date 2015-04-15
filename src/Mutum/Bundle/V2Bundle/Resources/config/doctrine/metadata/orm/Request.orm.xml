@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Request" table="request">
+    <indexes>
+      <index name="requ_borrower_id" columns="requ_borrower_id"/>
+      <index name="requ_produit_id" columns="requ_prod_id"/>
+      <index name="requ_status" columns="requ_status"/>
+      <index name="requ_lender_id" columns="requ_lender_id"/>
+      <index name="requ_next" columns="requ_prol_id"/>
+      <index name="requ_discussion" columns="requ_discussion"/>
+      <index name="requ_borrower_nota_id" columns="requ_borrower_nota_id"/>
+      <index name="requ_lender_nota_id" columns="requ_lender_nota_id"/>
+      <index name="requ_caut_id" columns="requ_caut_id"/>
+    </indexes>
+    <id name="requId" type="integer" column="requ_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="requLenderId" type="integer" column="requ_lender_id" nullable="true"/>
+    <field name="requBorrowerId" type="integer" column="requ_borrower_id" nullable="false"/>
+    <field name="requProdId" type="integer" column="requ_prod_id" nullable="false"/>
+    <field name="requDateCreation" type="datetime" column="requ_date_creation" nullable="false"/>
+    <field name="requDateFrom" type="date" column="requ_date_from" nullable="false"/>
+    <field name="requDateTo" type="date" column="requ_date_to" nullable="false"/>
+    <field name="requProlId" type="integer" column="requ_prol_id" nullable="true"/>
+    <field name="requCredit" type="integer" column="requ_credit" nullable="false"/>
+    <field name="requDiscussion" type="integer" column="requ_discussion" nullable="false"/>
+    <field name="requCode" type="string" column="requ_code" length="255" nullable="true"/>
+    <field name="requStatus" type="integer" column="requ_status" nullable="false"/>
+    <field name="requLenderNotaId" type="integer" column="requ_lender_nota_id" nullable="true"/>
+    <field name="requBorrowerNotaId" type="integer" column="requ_borrower_nota_id" nullable="true"/>
+    <field name="requProdNote" type="integer" column="requ_prod_note" nullable="false"/>
+    <field name="requLenderArchive" type="boolean" column="requ_lender_archive" nullable="false"/>
+    <field name="requBorrowerArchive" type="boolean" column="requ_borrower_archive" nullable="false"/>
+    <field name="requLenderRead" type="boolean" column="requ_lender_read" nullable="false"/>
+    <field name="requBorrowerRead" type="boolean" column="requ_borrower_read" nullable="false"/>
+    <field name="requCautId" type="integer" column="requ_caut_id" nullable="true"/>
+  </entity>
+</doctrine-mapping>

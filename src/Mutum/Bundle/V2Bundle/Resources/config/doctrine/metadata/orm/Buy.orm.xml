@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Buy" table="buy">
+    <unique-constraints>
+      <unique-constraint name="buy_slug" columns="buy_slug"/>
+    </unique-constraints>
+    <id name="buyId" type="integer" column="buy_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="buyName" type="string" column="buy_name" length="255" nullable="false"/>
+    <field name="buyPrice" type="integer" column="buy_price" nullable="false"/>
+    <field name="buyGift" type="integer" column="buy_gift" nullable="false"/>
+    <field name="buyColor" type="string" column="buy_color" length="255" nullable="false"/>
+    <field name="buyColor2" type="string" column="buy_color2" length="255" nullable="false"/>
+    <field name="buyActive" type="integer" column="buy_active" nullable="false"/>
+    <field name="buySlug" type="string" column="buy_slug" length="255" nullable="true"/>
+  </entity>
+</doctrine-mapping>

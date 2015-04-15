@@ -1,0 +1,15 @@
+mutum_migration:
+    resource: "@MutumMigrationBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+mutum_v2:
+    resource: "@MutumV2Bundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+mutum_v1:
+    resource: "@MutumV1Bundle/Controller/"
+    type:     annotation
+    prefix:   /
+

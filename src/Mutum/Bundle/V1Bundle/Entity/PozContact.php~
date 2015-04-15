@@ -1,0 +1,60 @@
+<?php
+
+namespace Mutum\Bundle\V1Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * PozContact
+ *
+ * @ORM\Table(name="poz_contact", indexes={@ORM\Index(name="contact_user_id", columns={"contact_user_id"}), @ORM\Index(name="contact_dest_user_id", columns={"contact_dest_user_id"})})
+ * @ORM\Entity
+ */
+class PozContact
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="contact_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $contactId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="contact_user_id", type="integer", nullable=false)
+     */
+    private $contactUserId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="contact_dest_user_id", type="integer", nullable=false)
+     */
+    private $contactDestUserId;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="contact_date_creation", type="datetime", nullable=false)
+     */
+    private $contactDateCreation;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="contact_date_accept", type="datetime", nullable=false)
+     */
+    private $contactDateAccept;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="contact_status", type="string", length=1, nullable=false)
+     */
+    private $contactStatus;
+
+
+}

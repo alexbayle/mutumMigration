@@ -1,0 +1,53 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Prolongation
+ *
+ * @ORM\Table(name="prolongation", indexes={@ORM\Index(name="prol_requ_id", columns={"prol_requ_id"})})
+ * @ORM\Entity
+ */
+class Prolongation
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="prol_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $prolId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="prol_requ_id", type="integer", nullable=false)
+     */
+    private $prolRequId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="prol_credit", type="integer", nullable=false)
+     */
+    private $prolCredit;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="prol_date", type="date", nullable=false)
+     */
+    private $prolDate;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prol_message", type="text", nullable=false)
+     */
+    private $prolMessage;
+
+
+}

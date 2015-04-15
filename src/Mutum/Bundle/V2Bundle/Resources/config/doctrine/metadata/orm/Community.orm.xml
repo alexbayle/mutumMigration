@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Community" table="community">
+    <indexes>
+      <index name="comm_cat" columns="comm_cat"/>
+      <index name="comm_address" columns="comm_address"/>
+    </indexes>
+    <id name="commId" type="integer" column="comm_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="commName" type="string" column="comm_name" length="255" nullable="false"/>
+    <field name="commDesc" type="text" column="comm_desc" nullable="false"/>
+    <field name="commAddress" type="integer" column="comm_address" nullable="false"/>
+    <field name="commCat" type="integer" column="comm_cat" nullable="false"/>
+    <field name="commType" type="string" column="comm_type" length="255" nullable="false"/>
+    <field name="commTypeData" type="string" column="comm_type_data" length="255" nullable="false"/>
+  </entity>
+</doctrine-mapping>

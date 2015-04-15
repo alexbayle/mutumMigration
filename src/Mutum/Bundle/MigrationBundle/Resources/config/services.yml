@@ -1,0 +1,145 @@
+parameters:
+
+
+services:
+    mutum.migration.manager.base_manager:
+        abstract: true
+        calls:
+            - [setEntityManager, [@doctrine.orm.v2_entity_manager]]
+
+    mutum.migration.manager.user:
+        parent: mutum.migration.manager.base_manager
+        class: Mutum\Bundle\MigrationBundle\Manager\UserManager
+        arguments: [@mutum.migration.manager.address, @mutum.migration.manager.rank]
+        calls:
+            - [setRepository, [@poz_user.repository]]
+
+    mutum.migration.manager.article_state:
+        parent: mutum.migration.manager.base_manager
+        class: Mutum\Bundle\MigrationBundle\Manager\ArticleStateManager
+        calls:
+            - [setRepository, [@article_state.repository]]
+
+
+    mutum.migration.manager.address:
+        parent: mutum.migration.manager.base_manager
+        class: Mutum\Bundle\MigrationBundle\Manager\AddressManager
+        calls:
+            - [setRepository, [@address.repository]]
+
+    mutum.migration.manager.abuse_type:
+        parent: mutum.migration.manager.base_manager
+        class: Mutum\Bundle\MigrationBundle\Manager\AbuseTypeManager
+        calls:
+            - [setRepository, [@poz_abuse_type.repository]]
+
+    mutum.migration.manager.buy:
+        parent: mutum.migration.manager.base_manager
+        class: Mutum\Bundle\MigrationBundle\Manager\BuyManager
+        calls:
+            - [setRepository, [@poz_buy.repository]]
+
+    mutum.migration.manager.category:
+        parent: mutum.migration.manager.base_manager
+        class: Mutum\Bundle\MigrationBundle\Manager\CategoryManager
+        calls:
+            - [setRepository, [@poz_category.repository]]
+
+    mutum.migration.manager.contact:
+        parent: mutum.migration.manager.base_manager
+        class: Mutum\Bundle\MigrationBundle\Manager\ContactManager
+        arguments: [@mutum.migration.manager.user]
+        calls:
+            - [setRepository, [@poz_contact.repository]]
+
+
+    mutum.migration.manager.mangopay:
+        parent: mutum.migration.manager.base_manager
+        class: Mutum\Bundle\MigrationBundle\Manager\MangopayManager
+        calls:
+            - [setRepository, [@poz_mangopay.repository]]
+
+    mutum.migration.manager.notation:
+        parent: mutum.migration.manager.base_manager
+        class: Mutum\Bundle\MigrationBundle\Manager\NotationManager
+#        arguments: [@
+        calls:
+            - [setRepository, [@poz_notation.repository]]
+
+
+    mutum.migration.manager.notification_cat:
+        parent: mutum.migration.manager.base_manager
+        class: Mutum\Bundle\MigrationBundle\Manager\NotificationCatManager
+        calls:
+            - [setRepository, [@poz_notification_cat.repository]]
+
+    mutum.migration.manager.notification_mail:
+        parent: mutum.migration.manager.base_manager
+        class: Mutum\Bundle\MigrationBundle\Manager\NotificationMailManager
+        arguments: [@mutum.migration.manager.notification_cat]
+        calls:
+            - [setRepository, [@poz_notification_mail.repository]]
+
+
+    mutum.migration.manager.product:
+        parent: mutum.migration.manager.base_manager
+        class: Mutum\Bundle\MigrationBundle\Manager\ProductManager
+        arguments:
+            - @mutum.migration.manager.article_state
+            - @mutum.migration.manager.category
+            - @mutum.migration.manager.address
+            - @mutum.migration.manager.user
+        calls:
+            - [setRepository, [@poz_article.repository]]
+
+    mutum.migration.manager.rank:
+        parent: mutum.migration.manager.base_manager
+        class: Mutum\Bundle\MigrationBundle\Manager\RankManager
+
+    mutum.migration.manager.request:
+        parent: mutum.migration.manager.base_manager
+        class: Mutum\Bundle\MigrationBundle\Manager\RequestManager
+        arguments: [@mutum.migration.manager.request_status, @mutum.migration.manager.user, @mutum.migration.manager.product, @mutum.migration.manager.notation]
+        calls:
+            - [setRepository, [@poz_request.repository]]
+
+    mutum.migration.manager.request_status:
+        parent: mutum.migration.manager.base_manager
+        class: Mutum\Bundle\MigrationBundle\Manager\RequestStatusManager
+        calls:
+            - [setRepository, [@poz_request_status.repository]]
+
+    mutum.migration.manager.research:
+        parent: mutum.migration.manager.base_manager
+        class: Mutum\Bundle\MigrationBundle\Manager\ResearchManager
+        arguments: [@mutum.migration.manager.category, @mutum.migration.manager.user]
+        calls:
+            - [setRepository, [@poz_research.repository]]
+
+
+    mutum.migration.manager.sponsor:
+        parent: mutum.migration.manager.base_manager
+        class: Mutum\Bundle\MigrationBundle\Manager\SponsorManager
+        arguments: [@mutum.migration.manager.user]
+        calls:
+            - [setRepository, [@poz_sponsor.repository]]
+
+    mutum.migration.manager.sponsor_unsub:
+        parent: mutum.migration.manager.base_manager
+        class: Mutum\Bundle\MigrationBundle\Manager\SponsorUnsubManager
+        arguments: [@mutum.migration.manager.user]
+        calls:
+            - [setRepository, [@poz_sponsor_unsubscribe.repository]]
+
+    mutum.migration.manager.transaction:
+        parent: mutum.migration.manager.base_manager
+        class: Mutum\Bundle\MigrationBundle\Manager\TransactionManager
+        arguments: [@mutum.migration.manager.user, @mutum.migration.manager.buy]
+        calls:
+            - [setRepository, [@poz_transaction.repository]]
+
+    mutum.migration.manager.word:
+        parent: mutum.migration.manager.base_manager
+        class: Mutum\Bundle\MigrationBundle\Manager\WordManager
+        calls:
+            - [setRepository, [@poz_words.repository]]

@@ -1,0 +1,39 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * AchievementsCat
+ *
+ * @ORM\Table(name="achievements_cat")
+ * @ORM\Entity
+ */
+class AchievementsCat
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="achc_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $achcId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="achc_name", type="string", length=255, nullable=false)
+     */
+    private $achcName;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="achc_order", type="integer", nullable=false)
+     */
+    private $achcOrder;
+
+
+}

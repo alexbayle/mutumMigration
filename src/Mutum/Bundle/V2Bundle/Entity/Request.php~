@@ -1,0 +1,158 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Request
+ *
+ * @ORM\Table(name="request", indexes={@ORM\Index(name="requ_borrower_id", columns={"requ_borrower_id"}), @ORM\Index(name="requ_produit_id", columns={"requ_prod_id"}), @ORM\Index(name="requ_status", columns={"requ_status"}), @ORM\Index(name="requ_lender_id", columns={"requ_lender_id"}), @ORM\Index(name="requ_next", columns={"requ_prol_id"}), @ORM\Index(name="requ_discussion", columns={"requ_discussion"}), @ORM\Index(name="requ_borrower_nota_id", columns={"requ_borrower_nota_id"}), @ORM\Index(name="requ_lender_nota_id", columns={"requ_lender_nota_id"}), @ORM\Index(name="requ_caut_id", columns={"requ_caut_id"})})
+ * @ORM\Entity
+ */
+class Request
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="requ_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $requId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="requ_lender_id", type="integer", nullable=true)
+     */
+    private $requLenderId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="requ_borrower_id", type="integer", nullable=false)
+     */
+    private $requBorrowerId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="requ_prod_id", type="integer", nullable=false)
+     */
+    private $requProdId;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="requ_date_creation", type="datetime", nullable=false)
+     */
+    private $requDateCreation;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="requ_date_from", type="date", nullable=false)
+     */
+    private $requDateFrom;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="requ_date_to", type="date", nullable=false)
+     */
+    private $requDateTo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="requ_prol_id", type="integer", nullable=true)
+     */
+    private $requProlId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="requ_credit", type="integer", nullable=false)
+     */
+    private $requCredit;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="requ_discussion", type="integer", nullable=false)
+     */
+    private $requDiscussion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="requ_code", type="string", length=255, nullable=true)
+     */
+    private $requCode;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="requ_status", type="integer", nullable=false)
+     */
+    private $requStatus;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="requ_lender_nota_id", type="integer", nullable=true)
+     */
+    private $requLenderNotaId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="requ_borrower_nota_id", type="integer", nullable=true)
+     */
+    private $requBorrowerNotaId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="requ_prod_note", type="integer", nullable=false)
+     */
+    private $requProdNote;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="requ_lender_archive", type="boolean", nullable=false)
+     */
+    private $requLenderArchive;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="requ_borrower_archive", type="boolean", nullable=false)
+     */
+    private $requBorrowerArchive;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="requ_lender_read", type="boolean", nullable=false)
+     */
+    private $requLenderRead;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="requ_borrower_read", type="boolean", nullable=false)
+     */
+    private $requBorrowerRead;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="requ_caut_id", type="integer", nullable=true)
+     */
+    private $requCautId;
+
+
+}

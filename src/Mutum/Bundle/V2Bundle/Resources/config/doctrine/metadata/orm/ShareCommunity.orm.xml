@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="ShareCommunity" table="share_community">
+    <indexes>
+      <index name="shac_comm_id" columns="shac_comm_id"/>
+    </indexes>
+    <id name="shacProdId" type="integer" column="shac_prod_id"/>
+    <id name="shacCommId" type="integer" column="shac_comm_id"/>
+  </entity>
+</doctrine-mapping>

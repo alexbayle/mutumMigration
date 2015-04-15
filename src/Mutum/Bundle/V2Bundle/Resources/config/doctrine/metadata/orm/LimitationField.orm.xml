@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="LimitationField" table="limitation_field">
+    <indexes>
+      <index name="limf_limi_id" columns="limf_limi_id"/>
+      <index name="limf_type" columns="limf_type"/>
+    </indexes>
+    <id name="limfId" type="integer" column="limf_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="limfTableId" type="integer" column="limf_table_id" nullable="false"/>
+    <field name="limfLimiId" type="integer" column="limf_limi_id" nullable="false"/>
+    <field name="limfType" type="integer" column="limf_type" nullable="false"/>
+  </entity>
+</doctrine-mapping>

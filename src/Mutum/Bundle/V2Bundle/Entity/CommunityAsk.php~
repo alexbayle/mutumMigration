@@ -1,0 +1,88 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * CommunityAsk
+ *
+ * @ORM\Table(name="community_ask", uniqueConstraints={@ORM\UniqueConstraint(name="coma_address", columns={"coma_address"})}, indexes={@ORM\Index(name="coma_user_id", columns={"coma_user_id"}), @ORM\Index(name="coma_type", columns={"coma_type"})})
+ * @ORM\Entity
+ */
+class CommunityAsk
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="coma_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $comaId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="coma_user_id", type="integer", nullable=false)
+     */
+    private $comaUserId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="coma_firstname", type="string", length=255, nullable=false)
+     */
+    private $comaFirstname;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="coma_lastname", type="string", length=255, nullable=false)
+     */
+    private $comaLastname;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="coma_number", type="integer", nullable=false)
+     */
+    private $comaNumber;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="coma_address", type="integer", nullable=false)
+     */
+    private $comaAddress;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="coma_name", type="string", length=255, nullable=false)
+     */
+    private $comaName;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="coma_type", type="integer", nullable=false)
+     */
+    private $comaType;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="coma_text", type="text", nullable=false)
+     */
+    private $comaText;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="coma_want", type="boolean", nullable=false)
+     */
+    private $comaWant;
+
+
+}

@@ -1,0 +1,39 @@
+<?php
+
+namespace Mutum\Bundle\V1Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * PozNotificationMail
+ *
+ * @ORM\Table(name="poz_notification_mail")
+ * @ORM\Entity
+ */
+class PozNotificationMail
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="notifmail_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $notifmailId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="notifmail_name", type="string", length=255, nullable=false)
+     */
+    private $notifmailName;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="notifmail_cat", type="integer", nullable=false)
+     */
+    private $notifmailCat;
+
+
+}

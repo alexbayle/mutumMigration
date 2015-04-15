@@ -1,0 +1,55 @@
+<?php
+
+namespace Mutum\Bundle\V2Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Session
+ *
+ * @ORM\Table(name="session", indexes={@ORM\Index(name="sess_user_id", columns={"sess_user_id"})})
+ * @ORM\Entity
+ */
+class Session
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="sess_session_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $sessSessionId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="sess_rank", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $sessRank;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="sess_date_creation", type="datetime", nullable=false)
+     */
+    private $sessDateCreation;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="sess_url", type="string", length=1024, nullable=false)
+     */
+    private $sessUrl;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="sess_user_id", type="integer", nullable=false)
+     */
+    private $sessUserId;
+
+
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Article" table="article">
+    <indexes>
+      <index name="arti_state" columns="arti_state"/>
+      <index name="arti_cat" columns="arti_cat"/>
+    </indexes>
+    <id name="artiProdId" type="integer" column="arti_prod_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="artiPrice" type="integer" column="arti_price" nullable="false"/>
+    <field name="artiLength" type="integer" column="arti_length" nullable="false"/>
+    <field name="artiCat" type="integer" column="arti_cat" nullable="false"/>
+    <field name="artiCaution" type="integer" column="arti_caution" nullable="false"/>
+    <field name="artiDates" type="text" column="arti_dates" nullable="false"/>
+    <field name="artiPictures" type="string" column="arti_pictures" length="255" nullable="true"/>
+    <field name="artiState" type="integer" column="arti_state" nullable="false"/>
+  </entity>
+</doctrine-mapping>

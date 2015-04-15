@@ -1,0 +1,60 @@
+<?php
+
+namespace Mutum\Bundle\V1Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * PozSession
+ *
+ * @ORM\Table(name="poz_session")
+ * @ORM\Entity
+ */
+class PozSession
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="session_user_id", type="integer", nullable=false)
+     */
+    private $sessionUserId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="session_id", type="integer", nullable=false)
+     */
+    private $sessionId;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="session_created", type="datetime", nullable=false)
+     */
+    private $sessionCreated;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="session_url", type="text", nullable=false)
+     */
+    private $sessionUrl;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="session_rank", type="integer", nullable=false)
+     */
+    private $sessionRank;
+
+
+}
