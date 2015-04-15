@@ -1,0 +1,388 @@
+Mutum\Bundle\V2Bundle\Entity\CategoryArticle:
+    category_maison:
+        cataParentId:       ~
+        cataName:           Maison
+        cataDesc:           maison
+        cataOrder:          1
+        cataPictogramme:
+        cataLength:
+
+    category_maison_cuisine:
+        cataParentId:       @category_maison
+        cataName:           Cuisine (appareils et ustensiles)
+        cataDesc:           Cuisine (appareils et ustensiles)
+        cataOrder:          2
+        cataPictogramme:
+        cataLength:
+
+    category_maison_deco:
+        cataParentId:       @category_maison
+        cataName:           Déco
+        cataDesc:           Déco
+        cataOrder:          3
+        cataPictogramme:
+        cataLength:
+
+    category_maison_entretien:
+        cataParentId:       @category_maison
+        cataName:           Entretien / Nettoyage
+        cataDesc:           Entretien / Nettoyage
+        cataOrder:          4
+        cataPictogramme:
+        cataLength:
+
+    category_maison_mobilier:
+        cataParentId:       @category_maison
+        cataName:           Mobilier intérieur et extérieur
+        cataDesc:           Mobilier intérieur et extérieur
+        cataOrder:          5
+        cataPictogramme:
+        cataLength:
+
+    category_maison_electromenager:
+        cataParentId:       @category_maison
+        cataName:           Electroménager
+        cataDesc:           Electroménager
+        cataOrder:          6
+        cataPictogramme:
+        cataLength:
+
+    category_maison_jardin:
+        cataParentId:       @category_maison
+        cataName:           Jardin / Animalerie
+        cataDesc:           Jardin / Animalerie
+        cataOrder:          7
+        cataPictogramme:
+        cataLength:
+
+    category_bricolage:
+        cataParentId:       ~
+        cataName:           Bricolage / Jardinage
+        cataDesc:           Bricolage / Jardinage
+        cataOrder:          8
+        cataPictogramme:
+        cataLength:
+
+    category_bricolage_reparation:
+        cataParentId:       @category_bricolage
+        cataName:           Outils de réparation / Bricolage
+        cataDesc:           Outils de réparation / Bricolage
+        cataOrder:          9
+        cataPictogramme:
+        cataLength:
+
+    category_bricolage_jardinage:
+        cataParentId:       @category_bricolage
+        cataName:           Outils de jardinage
+        cataDesc:           Outils de jardinage
+        cataOrder:          10
+        cataPictogramme:
+        cataLength:
+
+    category_bricolage_construction:
+        cataParentId:       @category_bricolage
+        cataName:           Matériel de construction
+        cataDesc:           Matériel de construction
+        cataOrder:          11
+        cataPictogramme:
+        cataLength:
+
+    category_bricolage_renovation:
+        cataParentId:       @category_bricolage
+        cataName:           Matériel de rénovation
+        cataDesc:           Matériel de rénovation
+        cataOrder:          12
+        cataPictogramme:
+        cataLength:
+
+    category_culturel:
+        cataParentId:       ~
+        cataName:           Culturel
+        cataDesc:           Culturel
+        cataOrder:          13
+        cataPictogramme:
+        cataLength:
+
+    category_culturel_art:
+        cataParentId:       @category_culturel
+        cataName:           Art
+        cataDesc:           Art
+        cataOrder:          14
+        cataPictogramme:
+        cataLength:
+
+    category_culturel_livre:
+        cataParentId:       @category_culturel
+        cataName:           Livres (jeunesse, BD, romans, cuisine...)
+        cataDesc:           Livres (jeunesse, BD, romans, cuisine...)
+        cataOrder:          15
+        cataPictogramme:
+        cataLength:
+
+    category_culturel_cd:
+        cataParentId:       @category_culturel
+        cataName:           CD
+        cataDesc:           CD
+        cataOrder:          16
+        cataPictogramme:
+        cataLength:
+
+    category_culturel_dvd:
+        cataParentId:       @category_culturel
+        cataName:           DVD
+        cataDesc:           DVD
+        cataOrder:          17
+        cataPictogramme:
+        cataLength:
+
+    category_culturel_musique:
+        cataParentId:       @category_culturel
+        cataName:           Instruments de musique
+        cataDesc:           Instruments de musique
+        cataOrder:          18
+        cataPictogramme:
+        cataLength:
+
+    category_jeux:
+        cataParentId:       ~
+        cataName:           Jeux / Jouets
+        cataDesc:           Instruments de musique
+        cataOrder:          18
+        cataPictogramme:
+        cataLength:
+
+    category_jeux_societe:
+        cataParentId:       @category_jeux
+        cataName:           Jeux de société
+        cataDesc:           Jeux de société
+        cataOrder:          19
+        cataPictogramme:
+        cataLength:
+
+    category_jeux_video:
+        cataParentId:       @category_jeux
+        cataName:           Jeux vidéo et consoles
+        cataDesc:           Jeux vidéo et consoles
+        cataOrder:          20
+        cataPictogramme:
+        cataLength:
+
+    category_jeux_enfants:
+        cataParentId:       @category_jeux
+        cataName:           Jeux / Jouets pour enfants
+        cataDesc:           Jeux / Jouets pour enfants
+        cataOrder:          21
+        cataPictogramme:
+        cataLength:
+
+    category_jeux_exterieur:
+        cataParentId:       @category_jeux
+        cataName:           Jeux d'extérieur
+        cataDesc:           Jeux d'extérieur
+        cataOrder:          22
+        cataPictogramme:
+        cataLength:
+
+    category_jeux_autre:
+        cataParentId:       @category_jeux
+        cataName:           Autres jeux
+        cataDesc:           Autres jeux
+        cataOrder:          23
+        cataPictogramme:
+        cataLength:
+
+    category_hightech:
+        cataParentId:       ~
+        cataName:           High tech
+        cataDesc:           High tech
+        cataOrder:          24
+        cataPictogramme:
+        cataLength:
+
+    category_hightech_son:
+        cataParentId:       @category_hightech
+        cataName:           Matériel de son
+        cataDesc:           Matériel de son
+        cataOrder:          25
+        cataPictogramme:
+        cataLength:
+
+    category_hightech_photo:
+        cataParentId:       @category_hightech
+        cataName:           Appareil Photo / Vidéo
+        cataDesc:           Appareil Photo / Vidéo
+        cataOrder:          26
+        cataPictogramme:
+        cataLength:
+
+    category_hightech_tv:
+        cataParentId:       @category_hightech
+        cataName:           TV / vidéo-projecteur
+        cataDesc:           TV / vidéo-projecteur
+        cataOrder:          27
+        cataPictogramme:
+        cataLength:
+
+    category_hightech_informatique:
+        cataParentId:       @category_hightech
+        cataName:           Informatique (tablettes, ordinateurs...)
+        cataDesc:           Informatique (tablettes, ordinateurs...)
+        cataOrder:          28
+        cataPictogramme:
+        cataLength:
+
+    category_hightech_accessoires:
+        cataParentId:       @category_hightech
+        cataName:           Accessoires
+        cataDesc:           Accessoires
+        cataOrder:          29
+        cataPictogramme:
+        cataLength:
+
+    category_sports:
+        cataParentId:       ~
+        cataName:           Sports / activités extérieures
+        cataDesc:           Sports / activités extérieures
+        cataOrder:          30
+        cataPictogramme:
+        cataLength:
+
+
+    category_sports_indi:
+        cataParentId:       @category_sports
+        cataName:           sports individuels (athlétisme, tennis, gym…)
+        cataDesc:           sports individuels (athlétisme, tennis, gym…)
+        cataOrder:          31
+        cataPictogramme:
+        cataLength:
+
+    category_sports_coll:
+        cataParentId:       @category_sports
+        cataName:           sports collectifs (football, rugby, volley…)
+        cataDesc:           sports collectifs (football, rugby, volley…)
+        cataOrder:          32
+        cataPictogramme:
+        cataLength:
+
+    category_sports_hiver:
+        cataParentId:       @category_sports
+        cataName:           sports d'hiver (ski, patinage…)
+        cataDesc:           sports d'hiver (ski, patinage…)
+        cataOrder:          33
+        cataPictogramme:
+        cataLength:
+
+
+    category_sports_nautique:
+        cataParentId:       @category_sports
+        cataName:           sports nautiques (voile, jet ski, kitesurf…)
+        cataDesc:           sports nautiques (voile, jet ski, kitesurf…)
+        cataOrder:          34
+        cataPictogramme:
+        cataLength:
+
+
+    category_sports_xtrem:
+        cataParentId:       @category_sports
+        cataName:           sports extrêmes (motocross, dirt, basejump...)
+        cataDesc:           sports extrêmes (motocross, dirt, basejump...)
+        cataOrder:          35
+        cataPictogramme:
+        cataLength:
+
+
+    category_sports_autre:
+        cataParentId:       @category_sports
+        cataName:           autres sports / activités extérieures
+        cataDesc:           autres sports / activités extérieures
+        cataOrder:          36
+        cataPictogramme:
+        cataLength:
+
+    category_sports_materiel:
+        cataParentId:       @category_sports
+        cataName:           matériel de voyage (bagages, sac à dos…)
+        cataDesc:           matériel de voyage (bagages, sac à dos…)
+        cataOrder:          37
+        cataPictogramme:
+        cataLength:
+
+    category_sports_camping:
+        cataParentId:       @category_sports
+        cataName:           matériel de camping (tente...)
+        cataDesc:           matériel de camping (tente...)
+        cataOrder:          38
+        cataPictogramme:
+        cataLength:
+
+    category_mode:
+        cataParentId:       ~
+        cataName:           habillement / soin / santé
+        cataDesc:           habillement / soin / santé
+        cataOrder:          39
+        cataPictogramme:
+        cataLength:
+
+    category_mode_vetement:
+        cataParentId:      @category_mode
+        cataName:          vêtements / chaussures
+        cataDesc:          vêtements / chaussures
+        cataOrder:         40
+        cataPictogramme:
+        cataLength:
+
+    category_mode_accessoires:
+        cataParentId:       @category_mode
+        cataName:           accessoires
+        cataDesc:           accessoires
+        cataOrder:          41
+        cataPictogramme:
+        cataLength:
+
+    category_mode_couture:
+        cataParentId:      @category_mode
+        cataName:          matériel de couture
+        cataDesc:          matériel de couture
+        cataOrder:         42
+        cataPictogramme:
+        cataLength:
+
+    category_mode_costumes:
+        cataParentId:      @category_mode
+        cataName:          costumes
+        cataDesc:           costumes
+        cataOrder:          43
+        cataPictogramme:
+        cataLength:
+
+    category_mode_soin:
+        cataParentId:      @category_mode
+        cataName:          soin adulte / enfant / bébé
+        cataDesc:           soin adulte / enfant / bébé
+        cataOrder:          44
+        cataPictogramme:
+        cataLength:
+
+    category_mode_sante:
+        cataParentId:      @category_mode
+        cataName:           santé
+        cataDesc:         santé
+        cataOrder:          45
+        cataPictogramme:
+        cataLength:
+
+    category_divers:
+        cataParentId:      ~
+        cataName:         divers
+        cataDesc:         divers
+        cataOrder:        46
+        cataPictogramme:
+        cataLength:
+
+    category_a_trier:
+        cataParentId:      ~
+        cataName:         A TRIER
+        cataDesc:         A TRIER
+        cataOrder:        47
+        cataPictogramme:
+        cataLength:

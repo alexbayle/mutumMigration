@@ -45,11 +45,17 @@ class CategoryManager extends BaseManager
         return $this->getEntityManager()->getRepository('MutumV2Bundle:CategoryArticle')->find($id);
     }
 
+    public function findATrier()
+    {
+        return $this->getEntityManager()->getRepository('MutumV2Bundle:CategoryArticle')->findOneBy(array('cataName' => 'A TRIER'));
+    }
+
     public function findByV1Id($id)
     {
         $id = $id ? : -1;
         return $this->getEntityManager()->getRepository('MutumV2Bundle:CategoryArticle')->findOneBy(array('v1' => $id));
     }
+
 
 
 }

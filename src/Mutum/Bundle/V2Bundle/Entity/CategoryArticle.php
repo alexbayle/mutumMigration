@@ -24,7 +24,8 @@ class CategoryArticle
     /**
      * @var integer
      *
-     * @ORM\Column(name="cata_parent_id", type="integer", nullable=true)
+     * @ORM\ManyToOne(targetEntity="CategoryArticle")
+     * @ORM\JoinColumn(name="cata_parent_id", referencedColumnName="cata_id")
      */
     private $cataParentId;
 
@@ -52,19 +53,19 @@ class CategoryArticle
     /**
      * @var string
      *
-     * @ORM\Column(name="cata_pictogramme", type="string", length=255, nullable=false)
+     * @ORM\Column(name="cata_pictogramme", type="string", length=255, nullable=true)
      */
     private $cataPictogramme;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="cata_length", type="integer", nullable=false)
+     * @ORM\Column(name="cata_length", type="integer", nullable=true)
      */
     private $cataLength;
 
     /**
-     * @ORM\Column(name="v1", type="integer")
+     * @ORM\Column(name="v1", type="integer", nullable=true)
      */
     private $v1;
 

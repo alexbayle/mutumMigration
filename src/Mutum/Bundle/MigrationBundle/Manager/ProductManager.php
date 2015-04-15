@@ -115,7 +115,10 @@ class ProductManager extends BaseManager
 //            $article->setArtiProdId()
             $article->setArtiPrice($object->getArtPrice());
             $article->setArtiLength($object->getArtLength());
-            $article->setArtiCat($this->categoryManager->findByV1Id($object->getArtCatId()));
+
+//            $article->setArtiCat($this->categoryManager->findByV1Id($object->getArtCatId()));
+            $article->setArtiCat($this->categoryManager->findATrier());
+
             $article->setArtiCaution($object->getArtCaution());
             $article->setArtiDates($object->getArtDates());
 
