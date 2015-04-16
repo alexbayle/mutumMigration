@@ -34,7 +34,6 @@ class CategoryManager extends BaseManager
                 $this->progressUpdate();
             }
         }
-
         $this->getEntityManager()->flush();
         $this->getEntityManager()->clear();
         $this->progressStop();

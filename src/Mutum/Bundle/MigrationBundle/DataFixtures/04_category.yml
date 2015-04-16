@@ -386,3 +386,27 @@ Mutum\Bundle\V2Bundle\Entity\CategoryArticle:
         cataOrder:        47
         cataPictogramme:
         cataLength:
+
+    category_transport:
+        cataParentId:     ~
+        cataName:         transport
+        cataDesc:         transport
+        cateaOrder:       48
+        cataPictogramme:
+        cataLength:
+
+    category_transport_vehicule:
+        cataParentId:     @category_transport
+        cataName:         transport
+        cataDesc:         transport
+        cateaOrder:       49
+        cataPictogramme:
+        cataLength:
+
+    category_transport_accessoire:
+        cataParentId:     @category_transport
+        cataName:         transport
+        cataDesc:         transport
+        cateaOrder:       50
+        cataPictogramme:
+        cataLength:
