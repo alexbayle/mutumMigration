@@ -391,7 +391,7 @@ Mutum\Bundle\V2Bundle\Entity\CategoryArticle:
         cataParentId:     ~
         cataName:         transport
         cataDesc:         transport
-        cateaOrder:       48
+        cataOrder:       48
         cataPictogramme:
         cataLength:
 
@@ -399,7 +399,7 @@ Mutum\Bundle\V2Bundle\Entity\CategoryArticle:
         cataParentId:     @category_transport
         cataName:         transport
         cataDesc:         transport
-        cateaOrder:       49
+        cataOrder:       49
         cataPictogramme:
         cataLength:
 
@@ -407,6 +407,6 @@ Mutum\Bundle\V2Bundle\Entity\CategoryArticle:
         cataParentId:     @category_transport
         cataName:         transport
         cataDesc:         transport
-        cateaOrder:       50
+        cataOrder:       50
         cataPictogramme:
         cataLength:
