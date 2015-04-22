@@ -1,25 +1,21 @@
 \Mutum\Bundle\V2Bundle\Entity\Rank:
   rank_01:
-        rankName: Rang 1
-        rankImg: rank1.jpg
+        rankName: citoyen
+        rankImg: bonhomme.png
         rankAmount: 0
   rank_02:
-      rankName: Rang 2
-      rankImg: rank2.jpg
-      rankAmount: 10
+      rankName: orateur
+      rankImg: bonhomme.png
+      rankAmount: 0
   rank_03:
-      rankName: Rang 3
-      rankImg: rank3.jpg
-      rankAmount: 50
+      rankName: marchand
+      rankImg: bonhomme.png
+      rankAmount: 0
   rank_04:
-      rankName: Rang 4
-      rankImg: rank4.jpg
-      rankAmount: 100
+      rankName: senateur
+      rankImg: bonhomme.png
+      rankAmount: 0
   rank_05:
-      rankName: Rang 5
-      rankImg: rank5.jpg
-      rankAmount: 200
-  rank_06:
-      rankName: Rang 6
-      rankImg: rank6.jpg
-      rankAmount: 500
+      rankName: empereur
+      rankImg: bonhomme.png
+      rankAmount: 0

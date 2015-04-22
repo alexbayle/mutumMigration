@@ -80,6 +80,12 @@ class Article
      */
     private $artiState;
 
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="arti_dispo", type="integer", nullable=false)
+     */
+    private $arti_dispo;
 
 
     /**
@@ -267,4 +273,22 @@ class Article
     {
         return $this->artiState;
     }
+
+    /**
+     * @param int $arti_dispo
+     */
+    public function setArtiDispo($arti_dispo)
+    {
+        $this->arti_dispo = $arti_dispo;
+    }
+
+    /**
+     * @return int
+     */
+    public function getArtiDispo()
+    {
+        return $this->arti_dispo;
+    }
+
+
 }

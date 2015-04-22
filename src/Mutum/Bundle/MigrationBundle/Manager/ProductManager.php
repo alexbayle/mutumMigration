@@ -121,6 +121,7 @@ class ProductManager extends BaseManager
 
             $article->setArtiCaution($object->getArtCaution());
             $article->setArtiDates($object->getArtDates());
+            $article->setArtiDispo($object->getArtDispo());
 
             $product->setArticle($article);
 //            $article->setProduct($product);
