@@ -15,6 +15,7 @@ class ArticleStateManager extends BaseManager
             $state->setArtsText($text);
             $this->getEntityManager()->persist($state);
         }
+        $this->getEntityManager()->flush();
 
         return $state;
     }

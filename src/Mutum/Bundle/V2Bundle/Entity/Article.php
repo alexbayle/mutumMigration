@@ -81,6 +81,7 @@ class Article
     private $artiState;
 
 
+
     /**
      * @return mixed
      */
