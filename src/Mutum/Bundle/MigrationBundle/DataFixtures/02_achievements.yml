@@ -1,12 +1,12 @@
 \Mutum\Bundle\V2Bundle\Entity\Achievements:
     achievements_01:
-        achiName: "Finir son inscription jusqu'à la fin"
-        achiTitle: "Finir son inscription jusqu'à la fin"
-        achiDesc: "Finir son inscription jusqu'à la fin"
+        achiName: "Completer son profil à 70%"
+        achiTitle: "Completer son profil à 70%"
+        achiDesc: "Completer son profil à 70%"
         achiCat: 1
         achiOrder: 1
         achiWin: 30
-        achiCondition: register
+        achiCondition: editprofil
 
     achievements_02:
         achiName: "Référencer son premier objet avec photo"
@@ -36,253 +36,235 @@
         achiCondition: borrow.1
 
     achievements_05:
-        achiName: ""
-        achiTitle: ""
-        achiDesc: ""
-        achiCat:
-        achiOrder:
-        achiWin:
-        achiCondition:
+        achiName: "Emprunter 3 objets "
+        achiTitle: "Emprunter 3 objets "
+        achiDesc: "Emprunter 3 objets "
+        achiCat: 1
+        achiOrder: 5
+        achiWin: 10
+        achiCondition: borrow.3
 
     achievements_06:
-        achiName: ""
-        achiTitle: ""
-        achiDesc: ""
-        achiCat:
-        achiOrder:
-        achiWin:
-        achiCondition:
+        achiName: "Avoir déposé une note à un objet "
+        achiTitle: "Avoir déposé une note à un objet "
+        achiDesc: "Avoir déposé une note à un objet "
+        achiCat: 1
+        achiOrder: 6
+        achiWin: 10
+        achiCondition: noteobj.1
 
     achievements_07:
-        achiName: ""
-        achiTitle: ""
-        achiDesc: ""
-        achiCat:
-        achiOrder:
-        achiWin:
-        achiCondition:
+        achiName: "Parrainer son premier filleul "
+        achiTitle: "Parrainer son premier filleul "
+        achiDesc: "Parrainer son premier filleul "
+        achiCat: 1
+        achiOrder: 7
+        achiWin: 20
+        achiCondition: godfather.1
 
     achievements_08:
-                achiName: ""
-                achiTitle: ""
-                achiDesc: ""
-                achiCat:
-                achiOrder:
-                achiWin:
-                achiCondition:
+        achiName: "Parrainer 5 filleuls "
+        achiTitle: "Parrainer 5 filleuls "
+        achiDesc: "Parrainer 5 filleuls "
+        achiCat: 1
+        achiOrder: 8
+        achiWin: 20
+        achiCondition: godfather.5
 
     achievements_09:
-                achiName: ""
-                achiTitle: ""
-                achiDesc: ""
-                achiCat:
-                achiOrder:
-                achiWin:
-                achiCondition:
+        achiName: "Référencer 10 objets avec photo "
+        achiTitle: "Référencer 10 objets avec photo "
+        achiDesc: "Référencer 10 objets avec photo "
+        achiCat: 2
+        achiOrder: 9
+        achiWin: 20
+        achiCondition: new.10
 
     achievements_10:
-                achiName: ""
-                achiTitle: ""
-                achiDesc: ""
-                achiCat:
-                achiOrder:
-                achiWin:
-                achiCondition:
+        achiName: "Prêter 5 objets "
+        achiTitle: "Prêter 5 objets "
+        achiDesc: "Prêter 5 objets "
+        achiCat: 2
+        achiOrder: 10
+        achiWin: 20
+        achiCondition: lend.5
 
     achievements_11:
-                achiName: ""
-                achiTitle: ""
-                achiDesc: ""
-                achiCat:
-                achiOrder:
-                achiWin:
-                achiCondition:
+        achiName: "Emprunter 10 objets "
+        achiTitle: "Emprunter 10 objets "
+        achiDesc: "Emprunter 10 objets "
+        achiCat: 2
+        achiOrder: 11
+        achiWin: 20
+        achiCondition: borrow.10
 
     achievements_12:
-                achiName: ""
-                achiTitle: ""
-                achiDesc: ""
-                achiCat:
-                achiOrder:
-                achiWin:
-                achiCondition:
+        achiName: "Parrainer 10 filleuls "
+        achiTitle: "Parrainer 10 filleuls "
+        achiDesc: "Parrainer 10 filleuls "
+        achiCat: 2
+        achiOrder: 12
+        achiWin: 20
+        achiCondition: godfather.10
 
     achievements_13:
-                achiName: ""
-                achiTitle: ""
-                achiDesc: ""
-                achiCat:
-                achiOrder:
-                achiWin:
-                achiCondition:
+        achiName: "Avoir déposé 10 notes à 10 prêteurs "
+        achiTitle: "Avoir déposé 10 notes à 10 prêteurs "
+        achiDesc: "Avoir déposé 10 notes à 10 prêteurs "
+        achiCat: 2
+        achiOrder: 13
+        achiWin: 20
+        achiCondition: notelend.10
 
     achievements_14:
-                achiName: ""
-                achiTitle: ""
-                achiDesc: ""
-                achiCat:
-                achiOrder:
-                achiWin:
-                achiCondition:
+        achiName: "Avoir déposé 10 notes à 10 objets "
+        achiTitle: "Avoir déposé 10 notes à 10 objets "
+        achiDesc: "Avoir déposé 10 notes à 10 objets "
+        achiCat: 2
+        achiOrder: 14
+        achiWin: 20
+        achiCondition: noteobj.10
 
     achievements_15:
-                achiName: ""
-                achiTitle: ""
-                achiDesc: ""
-                achiCat:
-                achiOrder:
-                achiWin:
-                achiCondition:
+        achiName: "Référencer 25 objets avec photo "
+        achiTitle: "Référencer 25 objets avec photo "
+        achiDesc: "Référencer 25 objets avec photo "
+        achiCat: 3
+        achiOrder: 15
+        achiWin: 20
+        achiCondition: new.25
 
     achievements_16:
-                achiName: ""
-                achiTitle: ""
-                achiDesc: ""
-                achiCat:
-                achiOrder:
-                achiWin:
-                achiCondition:
+        achiName: "Prêter 10 objets"
+        achiTitle: "Prêter 10 objets"
+        achiDesc: "Prêter 10 objets"
+        achiCat: 3
+        achiOrder: 16
+        achiWin: 20
+        achiCondition: lend.10
 
     achievements_17:
-                achiName: ""
-                achiTitle: ""
-                achiDesc: ""
-                achiCat:
-                achiOrder:
-                achiWin:
-                achiCondition:
+        achiName: "Emprunter 25 objets "
+        achiTitle: "Emprunter 25 objets "
+        achiDesc: "Emprunter 25 objets "
+        achiCat: 3
+        achiOrder: 17
+        achiWin: 20
+        achiCondition: borrow.25
 
     achievements_18:
-                achiName: ""
-                achiTitle: ""
-                achiDesc: ""
-                achiCat:
-                achiOrder:
-                achiWin:
-                achiCondition:
+        achiName: "Parrainer 25 filleuls "
+        achiTitle: "Parrainer 25 filleuls "
+        achiDesc: "Parrainer 25 filleuls "
+        achiCat: 3
+        achiOrder: 18
+        achiWin: 20
+        achiCondition: godfather.25
 
     achievements_19:
-                achiName: ""
-                achiTitle: ""
-                achiDesc: ""
-                achiCat:
-                achiOrder:
-                achiWin:
-                achiCondition:
+        achiName: "Avoir déposé 25 notes à 25 prêteurs "
+        achiTitle: "Avoir déposé 25 notes à 25 prêteurs "
+        achiDesc: "Avoir déposé 25 notes à 25 prêteurs "
+        achiCat: 3
+        achiOrder: 19
+        achiWin: 20
+        achiCondition: notelend.25
 
     achievements_20:
-                achiName: ""
-                achiTitle: ""
-                achiDesc: ""
-                achiCat:
-                achiOrder:
-                achiWin:
-                achiCondition:
+        achiName: "Avoir déposé 25 notes à 25 objets "
+        achiTitle: "Avoir déposé 25 notes à 25 objets "
+        achiDesc: "Avoir déposé 25 notes à 25 objets "
+        achiCat: 3
+        achiOrder: 20
+        achiWin: 20
+        achiCondition: noteobj.25
 
     achievements_21:
-                achiName: ""
-                achiTitle: ""
-                achiDesc: ""
-                achiCat:
-                achiOrder:
-                achiWin:
-                achiCondition:
+        achiName: "Avoir 5 fois de suite 5 étoiles en temps que prêteur "
+        achiTitle: "Avoir 5 fois de suite 5 étoiles en temps que prêteur "
+        achiDesc: "Avoir 5 fois de suite 5 étoiles en temps que prêteur "
+        achiCat: 3
+        achiOrder: 21
+        achiWin: 30
+        achiCondition: starlend.5
 
     achievements_22:
-                achiName: ""
-                achiTitle: ""
-                achiDesc: ""
-                achiCat:
-                achiOrder:
-                achiWin:
-                achiCondition:
+        achiName: "Avoir 5 fois de suite 5 étoiles en temps qu'emprunteur "
+        achiTitle: "Avoir 5 fois de suite 5 étoiles en temps qu'emprunteur "
+        achiDesc: "Avoir 5 fois de suite 5 étoiles en temps qu'emprunteur "
+        achiCat: 3
+        achiOrder: 22
+        achiWin: 30
+        achiCondition: starborrow.5
 
     achievements_23:
-                achiName: ""
-                achiTitle: ""
-                achiDesc: ""
-                achiCat:
-                achiOrder:
-                achiWin:
-                achiCondition:
+        achiName: "Elu au moins une fois objet insolite du mois  "
+        achiTitle: "Elu au moins une fois objet insolite du mois"
+        achiDesc: "Elu au moins une fois objet insolite du mois"
+        achiCat: 4
+        achiOrder: 23
+        achiWin: 10
+        achiCondition: month_obj
 
     achievements_24:
-                achiName: ""
-                achiTitle: ""
-                achiDesc: ""
-                achiCat:
-                achiOrder:
-                achiWin:
-                achiCondition:
+        achiName: "Référencer 50 objets avec photo "
+        achiTitle: "Référencer 50 objets avec photo "
+        achiDesc: "Référencer 50 objets avec photo "
+        achiCat: 4
+        achiOrder: 24
+        achiWin: 30
+        achiCondition: new.50
 
     achievements_25:
-                achiName: ""
-                achiTitle: ""
-                achiDesc: ""
-                achiCat:
-                achiOrder:
-                achiWin:
-                achiCondition:
+        achiName: "Prêter 50 objets "
+        achiTitle: "Prêter 50 objets "
+        achiDesc: "Prêter 50 objets "
+        achiCat: 4
+        achiOrder: 25
+        achiWin: 30
+        achiCondition: lend.50
 
     achievements_26:
-                achiName: ""
-                achiTitle: ""
-                achiDesc: ""
-                achiCat:
-                achiOrder:
-                achiWin:
-                achiCondition:
+        achiName: "Emprunter 50 objets "
+        achiTitle: "Emprunter 50 objets "
+        achiDesc: "Emprunter 50 objets "
+        achiCat: 4
+        achiOrder: 26
+        achiWin: 30
+        achiCondition: borrow.50
 
     achievements_27:
-                achiName: ""
-                achiTitle: ""
-                achiDesc: ""
-                achiCat:
-                achiOrder:
-                achiWin:
-                achiCondition:
+        achiName: "Parrainer 50 filleuls "
+        achiTitle: "Parrainer 50 filleuls "
+        achiDesc: "Parrainer 50 filleuls "
+        achiCat: 4
+        achiOrder: 27
+        achiWin: 30
+        achiCondition: godfather.50
 
     achievements_28:
-                achiName: ""
-                achiTitle: ""
-                achiDesc: ""
-                achiCat:
-                achiOrder:
-                achiWin:
-                achiCondition:
+        achiName: "Avoir déposé 50 notes à 50 prêteurs "
+        achiTitle: "Avoir déposé 50 notes à 50 prêteurs "
+        achiDesc: "Avoir déposé 50 notes à 50 prêteurs "
+        achiCat: 4
+        achiOrder: 28
+        achiWin: 30
+        achiCondition: notelend.50
 
     achievements_29:
-                achiName: ""
-                achiTitle: ""
-                achiDesc: ""
-                achiCat:
-                achiOrder:
-                achiWin:
-                achiCondition:
+        achiName: "Avoir déposé 50 notes à 50 objets"
+        achiTitle: "Avoir déposé 50 notes à 50 objets "
+        achiDesc: "Avoir déposé 50 notes à 50 objets "
+        achiCat: 4
+        achiOrder: 29
+        achiWin: 30
+        achiCondition: noteobj.50
 
     achievements_30:
-                achiName: ""
-                achiTitle: ""
-                achiDesc: ""
-                achiCat:
-                achiOrder:
-                achiWin:
-                achiCondition:
-
-    achievements_31:
-                achiName: ""
-                achiTitle: ""
-                achiDesc: ""
-                achiCat:
-                achiOrder:
-                achiWin:
-                achiCondition:
-
-    achievements_32:
-                achiName: ""
-                achiTitle: ""
-                achiDesc: ""
-                achiCat:
-                achiOrder:
-                achiWin:
-                achiCondition:
+        achiName: "Elu au moins une fois utilisateur du mois"
+        achiTitle: "Elu au moins une fois utilisateur du mois"
+        achiDesc: "Elu au moins une fois utilisateur du mois"
+        achiCat: 4
+        achiOrder: 30
+        achiWin: 30
+        achiCondition: month_user
