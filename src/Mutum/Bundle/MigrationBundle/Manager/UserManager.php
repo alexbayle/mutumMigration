@@ -100,6 +100,7 @@ class UserManager extends BaseManager
             $user->setUserMangopayId($object->getUserMangopayId());
             $user->setUserCredit($object->getUserCredit());
             $user->setUserNbNotation($object->getUserNbNotation());
+            $user->setUserNotation($object)->getUserNotation();
             $user->setUserDateCreation($object->getUserCreation());
             $user->setUserActive($object->getUserActif());
             $user->setUserScore($object->getUserScore());
