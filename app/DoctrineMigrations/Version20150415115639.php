@@ -18,6 +18,7 @@ class Version20150415115639 extends AbstractMigration
         // this up() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() != 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
+        $this->addSql('SET foreign_key_checks = 0');
         $this->addSql('ALTER TABLE article DROP FOREIGN KEY FK_23A0E6671AC1E46');
         $this->addSql('ALTER TABLE article DROP FOREIGN KEY FK_23A0E66F47461EB');
         $this->addSql('ALTER TABLE article DROP FOREIGN KEY FK_23A0E66ADA7E5F3');
@@ -91,6 +92,7 @@ class Version20150415115639 extends AbstractMigration
         $this->addSql('ALTER TABLE user DROP user_title');
         $this->addSql('ALTER TABLE virtual_article CHANGE vira_virp_id vira_virp_id INT NOT NULL');
         $this->addSql('ALTER TABLE wishlist CHANGE wish_post_id wish_post_id INT NOT NULL');
+        $this->addSql('SET foreign_key_checks = 1');
     }
 
     /**

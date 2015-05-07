@@ -1,8 +1,8 @@
 \Mutum\Bundle\V2Bundle\Entity\Rank:
   rank_01:
-        rankName: citoyen
-        rankImg: bonhomme.png
-        rankAmount: 0
+      rankName: citoyen
+      rankImg: bonhomme.png
+      rankAmount: 0
   rank_02:
       rankName: orateur
       rankImg: bonhomme.png

@@ -1,7 +1,7 @@
 Mutum\Bundle\V2Bundle\Entity\CategoryArticle:
     category_maison:
         cataParentId:       ~
-        cataName:           Maison
+        cataName:           maison
         cataDesc:           maison
         cataOrder:          1
         cataPictogramme:
@@ -9,240 +9,240 @@ Mutum\Bundle\V2Bundle\Entity\CategoryArticle:
 
     category_maison_cuisine:
         cataParentId:       @category_maison
-        cataName:           Cuisine (appareils et ustensiles)
-        cataDesc:           Cuisine (appareils et ustensiles)
+        cataName:           cuisine (appareils et ustensiles)
+        cataDesc:           cuisine (appareils et ustensiles)
         cataOrder:          2
         cataPictogramme:
         cataLength:
 
     category_maison_deco:
         cataParentId:       @category_maison
-        cataName:           Déco
-        cataDesc:           Déco
+        cataName:           déco
+        cataDesc:           déco
         cataOrder:          3
         cataPictogramme:
         cataLength:
 
     category_maison_entretien:
         cataParentId:       @category_maison
-        cataName:           Entretien / Nettoyage
-        cataDesc:           Entretien / Nettoyage
+        cataName:           entretien / Nettoyage
+        cataDesc:           entretien / Nettoyage
         cataOrder:          4
         cataPictogramme:
         cataLength:
 
     category_maison_mobilier:
         cataParentId:       @category_maison
-        cataName:           Mobilier intérieur et extérieur
-        cataDesc:           Mobilier intérieur et extérieur
+        cataName:           mobilier intérieur et extérieur
+        cataDesc:           mobilier intérieur et extérieur
         cataOrder:          5
         cataPictogramme:
         cataLength:
 
     category_maison_electromenager:
         cataParentId:       @category_maison
-        cataName:           Electroménager
-        cataDesc:           Electroménager
+        cataName:           electroménager
+        cataDesc:           electroménager
         cataOrder:          6
         cataPictogramme:
         cataLength:
 
     category_maison_jardin:
         cataParentId:       @category_maison
-        cataName:           Jardin / Animalerie
-        cataDesc:           Jardin / Animalerie
+        cataName:           jardin / Animalerie
+        cataDesc:           jardin / Animalerie
         cataOrder:          7
         cataPictogramme:
         cataLength:
 
     category_bricolage:
         cataParentId:       ~
-        cataName:           Bricolage / Jardinage
-        cataDesc:           Bricolage / Jardinage
+        cataName:           bricolage / Jardinage
+        cataDesc:           bricolage / Jardinage
         cataOrder:          8
         cataPictogramme:
         cataLength:
 
     category_bricolage_reparation:
         cataParentId:       @category_bricolage
-        cataName:           Outils de réparation / Bricolage
-        cataDesc:           Outils de réparation / Bricolage
+        cataName:           outils de réparation / Bricolage
+        cataDesc:           outils de réparation / Bricolage
         cataOrder:          9
         cataPictogramme:
         cataLength:
 
     category_bricolage_jardinage:
         cataParentId:       @category_bricolage
-        cataName:           Outils de jardinage
-        cataDesc:           Outils de jardinage
+        cataName:           outils de jardinage
+        cataDesc:           outils de jardinage
         cataOrder:          10
         cataPictogramme:
         cataLength:
 
     category_bricolage_construction:
         cataParentId:       @category_bricolage
-        cataName:           Matériel de construction
-        cataDesc:           Matériel de construction
+        cataName:           matériel de construction
+        cataDesc:           matériel de construction
         cataOrder:          11
         cataPictogramme:
         cataLength:
 
     category_bricolage_renovation:
         cataParentId:       @category_bricolage
-        cataName:           Matériel de rénovation
-        cataDesc:           Matériel de rénovation
+        cataName:           matériel de rénovation
+        cataDesc:           matériel de rénovation
         cataOrder:          12
         cataPictogramme:
         cataLength:
 
     category_culturel:
         cataParentId:       ~
-        cataName:           Culturel
-        cataDesc:           Culturel
+        cataName:           culturel
+        cataDesc:           culturel
         cataOrder:          13
         cataPictogramme:
         cataLength:
 
     category_culturel_art:
         cataParentId:       @category_culturel
-        cataName:           Art
-        cataDesc:           Art
+        cataName:           art
+        cataDesc:           art
         cataOrder:          14
         cataPictogramme:
         cataLength:
 
     category_culturel_livre:
         cataParentId:       @category_culturel
-        cataName:           Livres (jeunesse, BD, romans, cuisine...)
-        cataDesc:           Livres (jeunesse, BD, romans, cuisine...)
+        cataName:           livres (jeunesse, bd, romans, cuisine...)
+        cataDesc:           livres (jeunesse, bd, romans, cuisine...)
         cataOrder:          15
         cataPictogramme:
         cataLength:
 
     category_culturel_cd:
         cataParentId:       @category_culturel
-        cataName:           CD
-        cataDesc:           CD
+        cataName:           cd
+        cataDesc:           cd
         cataOrder:          16
         cataPictogramme:
         cataLength:
 
     category_culturel_dvd:
         cataParentId:       @category_culturel
-        cataName:           DVD
-        cataDesc:           DVD
+        cataName:           dvd
+        cataDesc:           dvd
         cataOrder:          17
         cataPictogramme:
         cataLength:
 
     category_culturel_musique:
         cataParentId:       @category_culturel
-        cataName:           Instruments de musique
-        cataDesc:           Instruments de musique
+        cataName:           instruments de musique
+        cataDesc:           instruments de musique
         cataOrder:          18
         cataPictogramme:
         cataLength:
 
     category_jeux:
         cataParentId:       ~
-        cataName:           Jeux / Jouets
-        cataDesc:           Instruments de musique
+        cataName:           jeux / Jouets
+        cataDesc:           instruments de musique
         cataOrder:          18
         cataPictogramme:
         cataLength:
 
     category_jeux_societe:
         cataParentId:       @category_jeux
-        cataName:           Jeux de société
-        cataDesc:           Jeux de société
+        cataName:           jeux de société
+        cataDesc:           jeux de société
         cataOrder:          19
         cataPictogramme:
         cataLength:
 
     category_jeux_video:
         cataParentId:       @category_jeux
-        cataName:           Jeux vidéo et consoles
-        cataDesc:           Jeux vidéo et consoles
+        cataName:           jeux vidéo et consoles
+        cataDesc:           jeux vidéo et consoles
         cataOrder:          20
         cataPictogramme:
         cataLength:
 
     category_jeux_enfants:
         cataParentId:       @category_jeux
-        cataName:           Jeux / Jouets pour enfants
-        cataDesc:           Jeux / Jouets pour enfants
+        cataName:           jeux / Jouets pour enfants
+        cataDesc:           jeux / Jouets pour enfants
         cataOrder:          21
         cataPictogramme:
         cataLength:
 
     category_jeux_exterieur:
         cataParentId:       @category_jeux
-        cataName:           Jeux d'extérieur
-        cataDesc:           Jeux d'extérieur
+        cataName:           jeux d'extérieur
+        cataDesc:           jeux d'extérieur
         cataOrder:          22
         cataPictogramme:
         cataLength:
 
     category_jeux_autre:
         cataParentId:       @category_jeux
-        cataName:           Autres jeux
-        cataDesc:           Autres jeux
+        cataName:           autres jeux
+        cataDesc:           autres jeux
         cataOrder:          23
         cataPictogramme:
         cataLength:
 
     category_hightech:
         cataParentId:       ~
-        cataName:           High tech
-        cataDesc:           High tech
+        cataName:           high tech
+        cataDesc:           high tech
         cataOrder:          24
         cataPictogramme:
         cataLength:
 
     category_hightech_son:
         cataParentId:       @category_hightech
-        cataName:           Matériel de son
-        cataDesc:           Matériel de son
+        cataName:           matériel de son
+        cataDesc:           matériel de son
         cataOrder:          25
         cataPictogramme:
         cataLength:
 
     category_hightech_photo:
         cataParentId:       @category_hightech
-        cataName:           Appareil Photo / Vidéo
-        cataDesc:           Appareil Photo / Vidéo
+        cataName:           appareil Photo / Vidéo
+        cataDesc:           appareil Photo / Vidéo
         cataOrder:          26
         cataPictogramme:
         cataLength:
 
     category_hightech_tv:
         cataParentId:       @category_hightech
-        cataName:           TV / vidéo-projecteur
-        cataDesc:           TV / vidéo-projecteur
+        cataName:           tv / vidéo-projecteur
+        cataDesc:           tv / vidéo-projecteur
         cataOrder:          27
         cataPictogramme:
         cataLength:
 
     category_hightech_informatique:
         cataParentId:       @category_hightech
-        cataName:           Informatique (tablettes, ordinateurs...)
-        cataDesc:           Informatique (tablettes, ordinateurs...)
+        cataName:           informatique (tablettes, ordinateurs...)
+        cataDesc:           informatique (tablettes, ordinateurs...)
         cataOrder:          28
         cataPictogramme:
         cataLength:
 
     category_hightech_accessoires:
         cataParentId:       @category_hightech
-        cataName:           Accessoires
-        cataDesc:           Accessoires
+        cataName:           accessoires
+        cataDesc:           accessoires
         cataOrder:          29
         cataPictogramme:
         cataLength:
 
     category_sports:
         cataParentId:       ~
-        cataName:           Sports / activités extérieures
-        cataDesc:           Sports / activités extérieures
+        cataName:           sports / activités extérieures
+        cataDesc:           sports / activités extérieures
         cataOrder:          30
         cataPictogramme:
         cataLength:
@@ -350,24 +350,24 @@ Mutum\Bundle\V2Bundle\Entity\CategoryArticle:
     category_mode_costumes:
         cataParentId:      @category_mode
         cataName:          costumes
-        cataDesc:           costumes
-        cataOrder:          43
+        cataDesc:          costumes
+        cataOrder:         43
         cataPictogramme:
         cataLength:
 
     category_mode_soin:
         cataParentId:      @category_mode
         cataName:          soin adulte / enfant / bébé
-        cataDesc:           soin adulte / enfant / bébé
-        cataOrder:          44
+        cataDesc:          soin adulte / enfant / bébé
+        cataOrder:         44
         cataPictogramme:
         cataLength:
 
     category_mode_sante:
         cataParentId:      @category_mode
-        cataName:           santé
-        cataDesc:         santé
-        cataOrder:          45
+        cataName:          santé
+        cataDesc:          santé
+        cataOrder:         45
         cataPictogramme:
         cataLength:
 
@@ -381,8 +381,8 @@ Mutum\Bundle\V2Bundle\Entity\CategoryArticle:
 
     category_a_trier:
         cataParentId:      ~
-        cataName:         A TRIER
-        cataDesc:         A TRIER
+        cataName:         à trier
+        cataDesc:         à trier
         cataOrder:        47
         cataPictogramme:
         cataLength:

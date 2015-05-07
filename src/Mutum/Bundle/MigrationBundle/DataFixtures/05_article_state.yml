@@ -1,0 +1,16 @@
+Mutum\Bundle\V2Bundle\Entity\ArticleState:
+    state_1:
+        artsId: 1
+        artsText: neuf
+
+    state_2:
+        artsId: 2
+        artsText: très bon état
+
+    state_3:
+        artsId: 3
+        artsText: bon état
+
+    state_4:
+        artsId: 4
+        artsText: état correct

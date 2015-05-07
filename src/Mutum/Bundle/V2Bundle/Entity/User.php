@@ -184,6 +184,13 @@ class User
     private $userScore;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="user_token", type="string", nullable=true)
+     */
+    private $userToken;
+
+    /**
      * @ORM\OneToMany(targetEntity="Product", mappedBy="user", cascade={"persist", "remove"})
      * @ORM\JoinColumn(name="user_id", referencedColumnName="prod_user_id")
      */
@@ -769,6 +776,23 @@ class User
     {
         return $this->userScore;
     }
+
+    /**
+     * @param string $userToken
+     */
+    public function setUserToken($userToken)
+    {
+        $this->userToken = $userToken;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUserToken()
+    {
+        return $this->userToken;
+    }
+
 
     /**
      * @return mixed

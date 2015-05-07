@@ -161,7 +161,7 @@ class ProductManager extends BaseManager
                     $file->getExtension()
                 );
                 try {
-                    $fs->copy($file->getRealPath(), __DIR__ . '/../../../../../../v2/img/art/' . $filename);
+                    $fs->copy($file->getRealPath(), __DIR__ . '/../../../../../../../Obj /img/art/' . $filename);
                 } catch (\Exception $e) {
                     echo $e->getMessage() . PHP_EOL;
                 }
