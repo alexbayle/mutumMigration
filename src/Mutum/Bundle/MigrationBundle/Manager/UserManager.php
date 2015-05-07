@@ -105,11 +105,11 @@ class UserManager extends BaseManager
             $user->setUserActive($object->getUserActif());
             $user->setUserScore($object->getUserScore());
             $user->setUserOnline($object->getUserLastconnexion());
-            $user->setUserToken($object->getUserToken());
+
 
             // $user->setUserTitle($object->getUser);
             // $user->setUserFacebookId($object->getUser);
-             $user->setUserRank($this->rankManager->getRankByScore($object->getUserScore()));
+            $user->setUserRank($this->rankManager->getRankByScore($object->getUserScore()));
 
             $this->getEntityManager()->persist($user);
         }
