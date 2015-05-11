@@ -2,6 +2,7 @@
 
 namespace Mutum\Bundle\V2Bundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -42,7 +43,16 @@ class Discussion
      */
     private $discName;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Message", mappedBy="discussion", cascade={"persist"})
+     */
+    private $messages;
 
+
+    public function __construct()
+    {
+        $this->messages = new ArrayCollection();
+    }
 
     /**
      * Get discId
@@ -122,4 +132,36 @@ class Discussion
     {
         return $this->discName;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getMessages()
+    {
+        return $this->messages;
+    }
+
+    /**
+     * @param mixed $messages
+     */
+    public function setMessages($messages)
+    {
+        $this->messages = new ArrayCollection;
+        foreach ($messages as $message)
+        {
+            $this->addMessage($message);
+        }
+    }
+
+    public function addMessage(Message $message)
+    {
+        $this->messages[] = $message;
+    }
+
+    public function removeMessage(Message $message)
+    {
+        $this->messages->removeElement($message);
+    }
+
+
 }

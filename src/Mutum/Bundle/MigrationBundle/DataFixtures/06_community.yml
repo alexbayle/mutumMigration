@@ -1,0 +1,27 @@
+Mutum\Bundle\V2Bundle\Entity\CommunityCat:
+    comm_cat_{1..10}:
+        comcName: Communauté catégorie <current()>
+
+Mutum\Bundle\V2Bundle\Entity\Community:
+    comm_{1..20}:
+        commName: Communauté <current()>
+        commDesc: Description de la communauté 1
+        commAddress: <numberBetween(1, 200)> #@comm_address*
+        category: @comm_cat_*
+        commType: ''
+        commTypeData: ''
+
+#Mutum\Bundle\V2Bundle\Entity\CommunityAsk:
+#    comm_ask_1:
+#        comaUserId: 1388
+#        comaFirstname: firstname
+#        comaLastname: lastaname
+#        comaNumber: number
+#        comaAddress: <numberBetween(1, 200)>
+#        comaName: name
+#        comaType: type
+#        comaText: text
+#        comaWant: true
+
+
+

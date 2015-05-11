@@ -130,6 +130,7 @@ class RequestManager extends BaseManager
                 $message->setMessText($object->getReqMessage());
                 $message->setUser($request->getBorrower());
                 $message->setDiscussion($discussion);
+                $message->setMessClass('');
 
 
                 $speaker = new Speakers();

@@ -1,0 +1,7 @@
+Mutum\Bundle\V2Bundle\Entity\JoinCommunity:
+    join_comm_{1..10}:
+        community: @comm_<current()>
+        user: 1388
+        joinRank: 1
+        joinStatus: V
+        joinDesc: '' #Description

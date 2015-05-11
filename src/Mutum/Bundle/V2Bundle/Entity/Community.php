@@ -2,12 +2,13 @@
 
 namespace Mutum\Bundle\V2Bundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Community
  *
- * @ORM\Table(name="community", indexes={@ORM\Index(name="comm_cat", columns={"comm_cat"}), @ORM\Index(name="comm_address", columns={"comm_address"})})
+ * @ORM\Table(name="community")
  * @ORM\Entity
  */
 class Community
@@ -45,9 +46,10 @@ class Community
     /**
      * @var integer
      *
-     * @ORM\Column(name="comm_cat", type="integer", nullable=false)
+     * @ORM\ManyToOne(targetEntity="CommunityCat", inversedBy="communities")
+     * @ORM\JoinColumn(name="comm_cat", referencedColumnName="comc_id")
      */
-    private $commCat;
+    private $category;
 
     /**
      * @var string
@@ -63,6 +65,20 @@ class Community
      */
     private $commTypeData;
 
+    /**
+     * @ORM\OneToMany(targetEntity="JoinCommunity", mappedBy="community", cascade={"persist"})
+     */
+    private $joinCommunities;
+
+    public function __construct()
+    {
+        $this->joinCommunities = new ArrayCollection();
+    }
+
+    public function __toString()
+    {
+        return $this->getCommName()? : '';
+    }
 
 
     /**
@@ -145,27 +161,22 @@ class Community
     }
 
     /**
-     * Set commCat
-     *
-     * @param integer $commCat
-     * @return Community
+     * @return int
      */
-    public function setCommCat($commCat)
+    public function getCategory()
     {
-        $this->commCat = $commCat;
-
-        return $this;
+        return $this->category;
     }
 
     /**
-     * Get commCat
-     *
-     * @return integer 
+     * @param int $category
      */
-    public function getCommCat()
+    public function setCategory($category)
     {
-        return $this->commCat;
+        $this->category = $category;
     }
+
+
 
     /**
      * Set commType
@@ -212,4 +223,35 @@ class Community
     {
         return $this->commTypeData;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getJoinCommunities()
+    {
+        return $this->joinCommunities;
+    }
+
+    /**
+     * @param mixed $joinCommunities
+     */
+    public function setJoinCommunities($joinCommunities)
+    {
+        $this->joinCommunities = new ArrayCollection();
+        foreach ($joinCommunities as $joinCommunity)
+        {
+            $this->addJoinCommunity = $joinCommunity;
+        }
+    }
+
+    public function addJoinCommunities(JoinCommunity $joinCommunity)
+    {
+        $this->joinCommunities[] = $joinCommunity;
+    }
+
+    public function removeJoinCommunities(JoinCommunity $joinCommunity)
+    {
+        $this->joinCommunities->removeElement($joinCommunity);
+    }
+
 }

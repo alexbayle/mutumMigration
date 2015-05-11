@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * JoinCommunity
  *
- * @ORM\Table(name="join_community", indexes={@ORM\Index(name="join_user_id", columns={"join_user_id"})})
+ * @ORM\Table(name="join_community")
  * @ORM\Entity
  */
 class JoinCommunity
@@ -15,11 +15,14 @@ class JoinCommunity
     /**
      * @var integer
      *
-     * @ORM\Column(name="join_comm_id", type="integer", nullable=false)
+     * @ ORM\Column(name="join_comm_id", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="NONE")
+     *
+     * @ORM\ManyToOne(targetEntity="Community", inversedBy="join_communities", cascade={"persist"})
+     * @ORM\JoinColumn(name="join_comm_id", referencedColumnName="comm_id")
      */
-    private $joinCommId;
+    private $community;
 
     /**
      * @var integer
@@ -27,8 +30,11 @@ class JoinCommunity
      * @ORM\Column(name="join_user_id", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="NONE")
+     *
+     * @ ORM\ManyToOne(targetEntity="User", inversedBy="join_communities")
+     * @ ORM\JoinColumn(name="join_user_id", referencedColumnName="user_id")
      */
-    private $joinUserId;
+    private $user;
 
     /**
      * @var string
@@ -51,53 +57,39 @@ class JoinCommunity
      */
     private $joinDesc;
 
-
-
     /**
-     * Set joinCommId
-     *
-     * @param integer $joinCommId
-     * @return JoinCommunity
+     * @return int
      */
-    public function setJoinCommId($joinCommId)
+    public function getCommunity()
     {
-        $this->joinCommId = $joinCommId;
-
-        return $this;
+        return $this->community;
     }
 
     /**
-     * Get joinCommId
-     *
-     * @return integer 
+     * @param int $community
      */
-    public function getJoinCommId()
+    public function setCommunity($community)
     {
-        return $this->joinCommId;
+        $this->community = $community;
     }
 
     /**
-     * Set joinUserId
-     *
-     * @param integer $joinUserId
-     * @return JoinCommunity
+     * @return int
      */
-    public function setJoinUserId($joinUserId)
+    public function getUser()
     {
-        $this->joinUserId = $joinUserId;
-
-        return $this;
+        return $this->user;
     }
 
     /**
-     * Get joinUserId
-     *
-     * @return integer 
+     * @param int $user
      */
-    public function getJoinUserId()
+    public function setUser($user)
     {
-        return $this->joinUserId;
+        $this->user = $user;
     }
+
+
 
     /**
      * Set joinRank

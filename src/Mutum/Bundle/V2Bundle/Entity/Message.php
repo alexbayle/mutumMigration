@@ -152,6 +152,7 @@ class Message
      */
     public function setDiscussion(Discussion $discussion)
     {
+        $discussion->addMessage($this);
         $this->discussion = $discussion;
     }
 

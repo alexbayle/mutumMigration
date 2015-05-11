@@ -213,6 +213,12 @@ class User
      */
     private $v1;
 
+
+    /**
+     * @ORM\OneToMany(targetEntity="JoinCommunity", mappedBy="user")
+     */
+    private $joinCommunities;
+
     /**
      *
      */
@@ -221,6 +227,7 @@ class User
         $this->products = new ArrayCollection();
         $this->requestsDone = new ArrayCollection();
         $this->requestsReceived = new ArrayCollection();
+        $this->joinCommunities = new ArrayCollection();
     }
 
 
@@ -921,6 +928,34 @@ class User
     {
         $this->requestsReceived->removeElement($request);
     }
+
+    /**
+     * @return mixed
+     */
+    public function getJoinCommunities()
+    {
+        return $this->joinCommunities;
+    }
+
+    /**
+     * @param mixed $joinCommunities
+     */
+    public function setJoinCommunities($joinCommunities)
+    {
+        $this->joinCommunities = new ArrayCollection();
+        foreach ($joinCommunities as $joinCommunity)
+        {
+            $this->addJoinCommunities($joinCommunity);
+        }
+    }
+
+
+    public function addJoinCommunities(JoinCommunity $joinCommunity)
+    {
+        $joinCommunity->setJoinUser($this);
+        $this->joinCommunities[] = $joinCommunity;
+    }
+
 
 
 }
