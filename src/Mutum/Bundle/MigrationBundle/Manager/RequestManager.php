@@ -70,7 +70,7 @@ class RequestManager extends BaseManager
 //            $request->setRequCredit($object->get)
 //            $request->setRequDiscussion()
             $request->setRequCode($object->getReqCode());
-            $request->setRequStatus($this->requestStatusManager->find($object->getReqStatus()));
+            $request->setRequStatus($this->requestStatusManager->findOneByV1($object->getReqStatus()));
             $request->setRequLenderNotaId($this->notationManager->find($object->getReqPreteurNote()));
             $request->setRequBorrowerNotaId($this->notationManager->find($object->getReqEmprunteurNote()));
 //            $request->setRequProdNote($this->)
