@@ -155,6 +155,12 @@ class Request
      */
     private $requCautId;
 
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="requ_delete", type="boolean", nullable=true)
+     */
+    private $requDelete;
 
     /**
      * @ORM\Column(name="v1", type="integer")
@@ -589,6 +595,22 @@ class Request
     public function getRequCautId()
     {
         return $this->requCautId;
+    }
+
+    /**
+     * @param mixed $requDelete
+     */
+    public function setRequDelete($requDelete)
+    {
+        $this->requDelete = $requDelete;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRequDelete()
+    {
+        return $this->requDelete;
     }
 
     /**
