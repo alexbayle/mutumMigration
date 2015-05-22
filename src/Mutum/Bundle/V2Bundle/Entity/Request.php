@@ -2,6 +2,7 @@
 
 namespace Mutum\Bundle\V2Bundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -161,6 +162,20 @@ class Request
      */
     private $v1;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Post", mappedBy="request", cascade={"persist"})
+     * @ORM\JoinColumn(name="requ_id", referencedColumnName="post_requ_id")
+     */
+    private $posts;
+
+    /**
+     *
+     */
+    public function __construct()
+    {
+        $this->posts = new ArrayCollection();
+    }
+
 
     /**
      * Get requId
@@ -206,7 +221,7 @@ class Request
     }
 
     /**
-     * @return mixed
+     * @return Product
      */
     public function getProduct()
     {
@@ -590,6 +605,7 @@ class Request
     {
         return $this->requCautId;
     }
+
 
     /**
      * @return mixed

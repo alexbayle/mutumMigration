@@ -128,11 +128,6 @@ class ProductManager extends BaseManager
 
             $product->setAddress($this->addressManager->findOrCreateByV1Article($object));
 
-
-            /**
-             * todo
-             * migrate pictures
-             */
             $filenames = $this->copyPictures($object->getArtPictures());
             $product->getArticle()->setArtiPictures(json_encode($filenames));
             $product->getArticle()->setArtiState(

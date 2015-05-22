@@ -1,0 +1,7 @@
+Mutum\Bundle\V2Bundle\Entity\LimitationType:
+    limitation_type_01:
+        limtId: 1
+        limtName: user
+    limitation_type_02:
+        limtId: 2
+        limtName: community

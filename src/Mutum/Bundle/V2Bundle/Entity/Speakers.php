@@ -24,7 +24,7 @@ class Speakers
     /**
      * @var integer
      *
-     * @ORM\ManyToOne(targetEntity="Discussion", inversedBy="speakers")
+     * @ORM\ManyToOne(targetEntity="Discussion", inversedBy="speakers", cascade={"persist"})
      * @ORM\JoinColumn(name="spea_disc_id", referencedColumnName="disc_id")
      */
     private $discussion;

@@ -52,6 +52,9 @@ services:
         calls:
             - [setRepository, [@poz_contact.repository]]
 
+    mutum.migration.manager.discussion:
+        parent: mutum.migration.manager.base_manager
+        class: Mutum\Bundle\MigrationBundle\Manager\DiscussionManager
 
     mutum.migration.manager.mangopay:
         parent: mutum.migration.manager.base_manager
@@ -80,6 +83,14 @@ services:
         calls:
             - [setRepository, [@poz_notification_mail.repository]]
 
+    mutum.migration.manager.post:
+        parent: mutum.migration.manager.base_manager
+        class: Mutum\Bundle\MigrationBundle\Manager\PostManager
+        arguments: [@mutum.migration.manager.post_cat]
+
+    mutum.migration.manager.post_cat:
+        parent: mutum.migration.manager.base_manager
+        class: Mutum\Bundle\MigrationBundle\Manager\PostCatManager
 
     mutum.migration.manager.product:
         parent: mutum.migration.manager.base_manager
@@ -99,7 +110,13 @@ services:
     mutum.migration.manager.request:
         parent: mutum.migration.manager.base_manager
         class: Mutum\Bundle\MigrationBundle\Manager\RequestManager
-        arguments: [@mutum.migration.manager.request_status, @mutum.migration.manager.user, @mutum.migration.manager.product, @mutum.migration.manager.notation]
+        arguments:
+            - @mutum.migration.manager.request_status
+            - @mutum.migration.manager.user
+            - @mutum.migration.manager.product
+            - @mutum.migration.manager.notation
+            - @mutum.migration.manager.discussion
+            - @mutum.migration.manager.post
         calls:
             - [setRepository, [@poz_request.repository]]
 
