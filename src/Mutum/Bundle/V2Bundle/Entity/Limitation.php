@@ -21,15 +21,57 @@ class Limitation
      */
     private $limiId;
 
+    /**
+     * @ORM\OneToOne(targetEntity="LimitationField", mappedBy="limitation", cascade={"persist"})
+     */
+    private $field;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="Post", inversedBy="limitations")
+     * @ORM\JoinColumn(name="limi_post_id", referencedColumnName="post_id")
+     */
+    private $post;
 
     /**
      * Get limiId
      *
-     * @return integer 
+     * @return integer
      */
     public function getLimiId()
     {
         return $this->limiId;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getField()
+    {
+        return $this->field;
+    }
+
+    /**
+     * @param mixed $field
+     */
+    public function setField($field)
+    {
+        $field->setLimitation($this);
+        $this->field = $field;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPost()
+    {
+        return $this->post;
+    }
+
+    /**
+     * @param mixed $post
+     */
+    public function setPost($post)
+    {
+        $post->addLimitations($this);
     }
 }

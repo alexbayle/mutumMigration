@@ -31,9 +31,10 @@ class LimitationField
     /**
      * @var integer
      *
-     * @ORM\Column(name="limf_limi_id", type="integer", nullable=false)
+     * @ORM\OneToOne(targetEntity="Limitation", inversedBy="field")
+     * @ORM\JoinColumn(name="limf_limi_id", referencedColumnName="limi_id")
      */
-    private $limfLimiId;
+    private $limitation;
 
     /**
      * @var integer
@@ -43,11 +44,10 @@ class LimitationField
     private $limfType;
 
 
-
     /**
      * Get limfId
      *
-     * @return integer 
+     * @return integer
      */
     public function getLimfId()
     {
@@ -70,7 +70,7 @@ class LimitationField
     /**
      * Get limfTableId
      *
-     * @return integer 
+     * @return integer
      */
     public function getLimfTableId()
     {
@@ -78,27 +78,21 @@ class LimitationField
     }
 
     /**
-     * Set limfLimiId
-     *
-     * @param integer $limfLimiId
-     * @return LimitationField
+     * @return int
      */
-    public function setLimfLimiId($limfLimiId)
+    public function getLimitation()
     {
-        $this->limfLimiId = $limfLimiId;
-
-        return $this;
+        return $this->limitation;
     }
 
     /**
-     * Get limfLimiId
-     *
-     * @return integer 
+     * @param int $limitation
      */
-    public function getLimfLimiId()
+    public function setLimitation($limitation)
     {
-        return $this->limfLimiId;
+        $this->limitation = $limitation;
     }
+
 
     /**
      * Set limfType
@@ -116,7 +110,7 @@ class LimitationField
     /**
      * Get limfType
      *
-     * @return integer 
+     * @return integer
      */
     public function getLimfType()
     {

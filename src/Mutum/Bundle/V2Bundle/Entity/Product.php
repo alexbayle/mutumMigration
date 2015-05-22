@@ -114,6 +114,15 @@ class Product
     private $requests;
 
     /**
+     * @ORM\ManyToMany(targetEntity="Community")
+     * @ORM\JoinTable(name="share_community",
+     *  joinColumns={@ORM\JoinColumn(name="shac_prod_id", referencedColumnName="prod_id")},
+     *  inverseJoinColumns={@ORM\JoinColumn(name="shac_comm_id", referencedColumnName="comm_id")}
+     * )
+     */
+    private $communities;
+
+    /**
      * @ORM\Column(name="v1", type="integer")
      */
     private $v1;
@@ -124,6 +133,7 @@ class Product
     public function __construct()
     {
         $this->requests = new ArrayCollection();
+        $this->communities = new ArrayCollection();
     }
 
     /**
@@ -443,6 +453,24 @@ class Product
     {
         $this->v1 = $v1;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getCommunities()
+    {
+        return $this->communities;
+    }
+
+    /**
+     * @param mixed $communities
+     */
+    public function setCommunities($communities)
+    {
+        $this->communities = $communities;
+    }
+
+
 
 
 }

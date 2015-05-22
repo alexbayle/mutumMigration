@@ -5,10 +5,7 @@ namespace Mutum\Bundle\MigrationBundle\Manager;
 
 use Mutum\Bundle\V1Bundle\Entity\PozRequest;
 use Mutum\Bundle\V1Bundle\Entity\PozUser;
-use Mutum\Bundle\V2Bundle\Entity\Discussion;
-use Mutum\Bundle\V2Bundle\Entity\Message;
 use Mutum\Bundle\V2Bundle\Entity\Request;
-use Mutum\Bundle\V2Bundle\Entity\Speakers;
 use Mutum\Bundle\V2Bundle\Entity\User;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -20,29 +17,40 @@ class RequestManager extends BaseManager
 {
     /** @var RequestStatusManager $requestStatusManager */
     private $requestStatusManager;
-    /** @var UserManager */
+    /** @var UserManager $userManager */
     private $userManager;
     /** @var ProductManager $productManager */
     private $productManager;
     /** @var NotationManager $notationManager */
     private $notationManager;
+    /** @var DiscussionManager $discussionManager */
+    private $discussionManager;
+    /** @var PostManager $postManager */
+    private $postManager;
+
 
     /**
      * @param RequestStatusManager $requestStatusManager
      * @param UserManager $userManager
      * @param ProductManager $productManager
      * @param NotationManager $notationManager
+     * @param DiscussionManager $discussionManager
+     * @param PostManager $postManager
      */
     public function __construct(
         RequestStatusManager $requestStatusManager,
         UserManager $userManager,
         ProductManager $productManager,
-        NotationManager $notationManager
+        NotationManager $notationManager,
+        DiscussionManager $discussionManager,
+        PostManager $postManager
     ) {
         $this->requestStatusManager = $requestStatusManager;
         $this->userManager = $userManager;
         $this->productManager = $productManager;
         $this->notationManager = $notationManager;
+        $this->discussionManager= $discussionManager;
+        $this->postManager = $postManager;
     }
 
     /**
@@ -120,39 +128,12 @@ class RequestManager extends BaseManager
 //                print_r($request); die;
 
 
-                $discussion = new Discussion();
-                $discussion->setDiscDateCreation($object->getReqDatetime());
-                $discussion->setDiscName(substr($object->getReqMessage(), 0, 50));
-                $discussion->setDiscAllGrantInvit(false);
-
-                $message = new Message();
-                $message->setMessDateCreation($object->getReqDatetime());
-                $message->setMessText($object->getReqMessage());
-                $message->setUser($request->getBorrower());
-                $message->setDiscussion($discussion);
-                $message->setMessClass('');
-
-
-                $speaker = new Speakers();
-                $speaker->setSpeaAdmin(false);
-                $speaker->setSpeaArchived(false);
-                $speaker->setDiscussion($discussion);
-                $speaker->setUser($request->getBorrower());
-                $speaker->setSpeaSeen(\DateTime::createFromFormat('Y-m-d H:i:s', '0000-00-00 00:00:00'));
-                $this->getEntityManager()->persist($speaker);
-
-                $speaker = new Speakers();
-                $speaker->setSpeaAdmin(false);
-                $speaker->setSpeaArchived(false);
-                $speaker->setDiscussion($discussion);
-                $speaker->setUser($request->getLender());
-                $speaker->setSpeaSeen(\DateTime::createFromFormat('Y-m-d H:i:s', '0000-00-00 00:00:00'));
-                $this->getEntityManager()->persist($speaker);
-
-
-                $request->setRequDiscussion($discussion);
-
                 $this->getEntityManager()->persist($request);
+                $this->getEntityManager()->flush();
+
+                $this->discussionManager->createByRequest($request, $object);
+                $this->postManager->createByRequest($request);
+
             }
 
             $this->progressUpdate();

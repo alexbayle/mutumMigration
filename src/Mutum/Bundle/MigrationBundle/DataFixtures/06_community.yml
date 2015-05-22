@@ -1,9 +1,9 @@
 Mutum\Bundle\V2Bundle\Entity\CommunityCat:
-    comm_cat_{1..10}:
+    comm_cat_{1..4}:
         comcName: Communauté catégorie <current()>
 
 Mutum\Bundle\V2Bundle\Entity\Community:
-    comm_{1..20}:
+    comm_{1..10}:
         commName: Communauté <current()>
         commDesc: Description de la communauté 1
         commAddress: <numberBetween(1, 200)> #@comm_address*

@@ -1,0 +1,28 @@
+Mutum\Bundle\V2Bundle\Entity\PostCat:
+    post_cat_1:
+        poscId:    1
+        poscName:  wishlist
+    post_cat_2:
+        poscId:    2
+        poscName:  new_article
+    post_cat_3:
+        poscId:    3
+        poscName:  new_actu
+    post_cat_4:
+        poscId:    4
+        poscName:  new_user
+    post_cat_5:
+        poscId:    5
+        poscName:  new_loan_borrower
+    post_cat_6:
+        poscId:    6
+        poscname:  new_load_lender
+    post_cat_7:
+        poscId:    7
+        poscName:  user_join_community
+    post_cat_8:
+        poscId:    8
+        poscName:  user_leave_community
+    post_cat_9:
+        poscId:    9
+        poscName:  message

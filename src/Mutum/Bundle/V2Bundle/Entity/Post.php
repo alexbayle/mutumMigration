@@ -2,12 +2,13 @@
 
 namespace Mutum\Bundle\V2Bundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Post
  *
- * @ORM\Table(name="post", indexes={@ORM\Index(name="post_user_id", columns={"post_user_id"}), @ORM\Index(name="post_comm_id", columns={"post_limitation"}), @ORM\Index(name="post_cat", columns={"post_cat"})})
+ * @ORM\Table(name="post")
  * @ORM\Entity
  */
 class Post
@@ -24,16 +25,18 @@ class Post
     /**
      * @var integer
      *
-     * @ORM\Column(name="post_user_id", type="integer", nullable=false)
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="posts")
+     * @ORM\JoinColumn(name="post_user_id", referencedColumnName="user_id")
      */
-    private $postUserId;
+    private $user;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="post_limitation", type="integer", nullable=true)
+     * @ORM\OneToMany(targetEntity="Limitation", mappedBy="posts", cascade={"persist"})
+     * @ORM\JoinColumn(name="post_id", referencedColumnName="limi_post_id")
      */
-    private $postLimitation;
+    private $limitations;
 
     /**
      * @var string
@@ -45,9 +48,10 @@ class Post
     /**
      * @var integer
      *
-     * @ORM\Column(name="post_cat", type="integer", nullable=false)
+     * @ORM\ManyToOne(targetEntity="PostCat", inversedBy="posts")
+     * @ORM\JoinColumn(name="post_cat", referencedColumnName="posc_id")
      */
-    private $postCat;
+    private $category;
 
     /**
      * @var \DateTime
@@ -63,127 +67,66 @@ class Post
      */
     private $postDeleted;
 
-
-
     /**
-     * Get postId
-     *
-     * @return integer 
+     * @ORM\ManyToOne(targetEntity="Request", inversedBy="posts")
+     * @ORM\JoinColumn(name="post_requ_id", referencedColumnName="requ_id")
      */
-    public function getPostId()
+    private $request;
+
+    public function __construct()
     {
-        return $this->postId;
+        $this->limitations = new ArrayCollection();
     }
 
     /**
-     * Set postUserId
-     *
-     * @param integer $postUserId
-     * @return Post
+     * @return int
      */
-    public function setPostUserId($postUserId)
+    public function getCategory()
     {
-        $this->postUserId = $postUserId;
-
-        return $this;
+        return $this->category;
     }
 
     /**
-     * Get postUserId
-     *
-     * @return integer 
+     * @param PostCat $category
      */
-    public function getPostUserId()
+    public function setCategory($category)
     {
-        return $this->postUserId;
+        $this->category = $category;
     }
 
     /**
-     * Set postLimitation
-     *
-     * @param integer $postLimitation
-     * @return Post
+     * @return int
      */
-    public function setPostLimitation($postLimitation)
+    public function getLimitations()
     {
-        $this->postLimitation = $postLimitation;
-
-        return $this;
+        return $this->limitations;
     }
 
     /**
-     * Get postLimitation
-     *
-     * @return integer 
+     * @param int $limitations
      */
-    public function getPostLimitation()
+    public function setLimitations($limitations)
     {
-        return $this->postLimitation;
+        $this->limitations = new ArrayCollection();
+        foreach ($limitations as $limitation)
+        {
+            $this->addLimitations($limitation);
+        }
+    }
+
+    public function addLimitations(Limitation $limitation)
+    {
+        $limitation->setPost($this);
+        $this->limitations[] = $limitation;
+    }
+
+    public function removeLimitations(Limitation $limitation)
+    {
+        $this->limitations->removeElement($limitation);
     }
 
     /**
-     * Set postText
-     *
-     * @param string $postText
-     * @return Post
-     */
-    public function setPostText($postText)
-    {
-        $this->postText = $postText;
-
-        return $this;
-    }
-
-    /**
-     * Get postText
-     *
-     * @return string 
-     */
-    public function getPostText()
-    {
-        return $this->postText;
-    }
-
-    /**
-     * Set postCat
-     *
-     * @param integer $postCat
-     * @return Post
-     */
-    public function setPostCat($postCat)
-    {
-        $this->postCat = $postCat;
-
-        return $this;
-    }
-
-    /**
-     * Get postCat
-     *
-     * @return integer 
-     */
-    public function getPostCat()
-    {
-        return $this->postCat;
-    }
-
-    /**
-     * Set postDateCreation
-     *
-     * @param \DateTime $postDateCreation
-     * @return Post
-     */
-    public function setPostDateCreation($postDateCreation)
-    {
-        $this->postDateCreation = $postDateCreation;
-
-        return $this;
-    }
-
-    /**
-     * Get postDateCreation
-     *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getPostDateCreation()
     {
@@ -191,25 +134,76 @@ class Post
     }
 
     /**
-     * Set postDeleted
-     *
+     * @param \DateTime $postDateCreation
+     */
+    public function setPostDateCreation($postDateCreation)
+    {
+        $this->postDateCreation = $postDateCreation;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function isPostDeleted()
+    {
+        return $this->postDeleted;
+    }
+
+    /**
      * @param boolean $postDeleted
-     * @return Post
      */
     public function setPostDeleted($postDeleted)
     {
         $this->postDeleted = $postDeleted;
-
-        return $this;
     }
 
     /**
-     * Get postDeleted
-     *
-     * @return boolean 
+     * @return int
      */
-    public function getPostDeleted()
+    public function getPostId()
     {
-        return $this->postDeleted;
+        return $this->postId;
     }
+
+    /**
+     * @param int $postId
+     */
+    public function setPostId($postId)
+    {
+        $this->postId = $postId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPostText()
+    {
+        return $this->postText;
+    }
+
+    /**
+     * @param string $postText
+     */
+    public function setPostText($postText)
+    {
+        $this->postText = $postText;
+    }
+
+    /**
+     * @return int
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * @param int $user
+     */
+    public function setUser($user)
+    {
+        $this->user = $user;
+    }
+
+
 }
