@@ -189,6 +189,12 @@ class User
      * @ORM\Column(name="user_token", type="string", nullable=true)
      */
     private $userToken;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="user_CodePromo", type="string", nullable=true)
+     */
+    private $userCodePromo;
 
     /**
      * @ORM\OneToMany(targetEntity="Product", mappedBy="user", cascade={"persist", "remove"})
@@ -799,6 +805,24 @@ class User
     {
         return $this->userToken;
     }
+
+    /**
+     * @param mixed $userCodePromo
+     */
+    public function setUserCodePromo($userCodePromo)
+    {
+        $this->userCodePromo = $userCodePromo;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUserCodePromo()
+    {
+        return $this->userCodePromo;
+    }
+
+
 
 
     /**
