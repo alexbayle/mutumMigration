@@ -151,7 +151,7 @@ class ProductManager extends BaseManager
             foreach ($files as $file) {
                 /** @var \Symfony\Component\Finder\SplFileInfo $file */
                 $filename = sprintf("%s.%s",
-                    hash('md5', sprintf("%s%s", $file->getBasename(), time())),
+                    //hash('md5', sprintf("%s%s", $file->getBasename(), time())),
                     hash('md5', $file->getBasename()),
                     $file->getExtension()
                 );
