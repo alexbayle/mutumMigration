@@ -151,12 +151,12 @@ class ProductManager extends BaseManager
             foreach ($files as $file) {
                 /** @var \Symfony\Component\Finder\SplFileInfo $file */
                 $filename = sprintf("%s.%s",
-//                    hash('md5', sprintf("%s%s", $file->getBasename(), time())),
+                    hash('md5', sprintf("%s%s", $file->getBasename(), time())),
                     hash('md5', $file->getBasename()),
                     $file->getExtension()
                 );
                 try {
-                    //$fs->copy($file->getRealPath(), __DIR__ . '/../../../../../../../Obj /img/art/' . $filename);
+                    $fs->copy($file->getRealPath(), __DIR__ . '/../../../../../../../Obj/img/art/' . $filename);
                 } catch (\Exception $e) {
                     echo $e->getMessage() . PHP_EOL;
                 }
