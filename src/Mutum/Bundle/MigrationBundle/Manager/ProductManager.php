@@ -130,6 +130,7 @@ class ProductManager extends BaseManager
 
             $filenames = $this->copyPictures($object->getArtPictures());
             $product->getArticle()->setArtiPictures(json_encode($filenames));
+
             $product->getArticle()->setArtiState(
                 $this->articleStateManager->findOneByText($object->getArtState())
             );
