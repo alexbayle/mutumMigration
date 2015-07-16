@@ -1,0 +1,41 @@
+\Mutum\Bundle\V2Bundle\Entity\Buy:
+      buy_01:
+          buy_id: 1
+          buy_name: offre 1
+          buy_price: 5
+          buy_gift: 50
+          buy_color:
+          buy_color2:
+          buy_active: 1
+          buy_slug: offre-1
+
+      buy_02:
+          buy_id: 2
+          buy_name: offre 2
+          buy_price: 10
+          buy_gift: 100
+          buy_color:
+          buy_color2:
+          buy_active: 1
+          buy_slug: offre-2
+
+      buy_03:
+          buy_id: 3
+          buy_name: offre 3
+          buy_price: 20
+          buy_gift: 200
+          buy_color:
+          buy_color2:
+          buy_active: 1
+          buy_slug: offre-3
+
+      buy_04:
+          buy_id: 4
+          buy_name: offre 4
+          buy_price: 50
+          buy_gift: 500
+          buy_color:
+          buy_color2:
+          buy_active: 1
+          buy_slug: offre-4
+          buy_slug: offre-4

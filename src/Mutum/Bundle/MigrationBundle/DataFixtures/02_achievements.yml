@@ -268,3 +268,30 @@
         achiOrder: 30
         achiWin: 30
         achiCondition: month_user
+
+    achievements_4001:
+        achiName: "4001"
+        achiTitle: "easter egg 1"
+        achiDesc: "logo"
+        achiCat: 4000
+        achiOrder: 31
+        achiWin: 30
+        achiCondition: easter_egg1
+
+    achievements_31:
+        achiName: "4002"
+        achiTitle: "easter egg 2"
+        achiDesc: "konami"
+        achiCat: 4000
+        achiOrder: 32
+        achiWin: 30
+        achiCondition: easter_egg2
+
+    achievements_31:
+        achiName: "4003"
+        achiTitle: "easter egg 3"
+        achiDesc: ""
+        achiCat: 4000
+        achiOrder: 33
+        achiWin:30
+        achiCondition: easter_egg3

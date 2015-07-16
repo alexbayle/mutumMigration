@@ -4,3 +4,8 @@ Mutum\Bundle\V2Bundle\Entity\Mangopay:
         mangPass:       Q1xzFqpVtna4BaFpCNeCzkkF5nshmmFvSTyuoYPe5pkUjr0Dx7
         mangLegalUser:  3810088
         mangWallet:     3866293
+    mangopay_02:
+        mangName:       mutumv2
+        mangPass:       Bwtj6hgeXRarTFSMwuatuvWrBv9y1jVUYCtJ1kQh1Zvy1FRd4n
+        mangLegalUser:  7589495
+        MangWallet:     7589579

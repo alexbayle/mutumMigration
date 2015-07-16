@@ -103,7 +103,7 @@ class ProductManager extends BaseManager
             $product->setUser($this->userManager->findByV1Id($object->getArtUserId()));
             $product->setProdName($object->getArtName());
             $product->setProdDesc($object->getArtDesc());
-//            $product->setProdLimitation()
+    //            $product->setProdLimitation()
             $product->setProdWin($object->getArtWin());
             $product->setProdNotation($object->getArtNotation());
             $product->setProdNbNotation($object->getArtNbNotation());
